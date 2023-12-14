@@ -1,6 +1,4 @@
-// searchFunctionality.js
 document.addEventListener("DOMContentLoaded", function () {
-  // Initially hide the results container
   const resultsContainer = document.getElementById("results-container");
   resultsContainer.style.display = "none";
 
@@ -16,7 +14,6 @@ function resetFilters() {
   document.getElementById("cityName").value = "";
   document.getElementById("email").value = "";
 
-  // Reset radio buttons for campus
   const campusRadioButtons = document.querySelectorAll('input[name="campus"]');
   if (campusRadioButtons.length > 0) {
     campusRadioButtons.forEach((radio) => {
@@ -24,20 +21,16 @@ function resetFilters() {
     });
   }
 
-  // Reset other inputs and checkboxes
   document.getElementById("courseName").value = "";
   document.getElementById("graduationYear").value = "";
 
-  // Reset checkboxes
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
   checkboxes.forEach((checkbox) => {
     checkbox.checked = false;
   });
 
-  // Reset birthday field
   document.getElementById("dob").value = "";
 
-  // Reset results container
   const resultsContainer = document.getElementById("results-container");
   resultsContainer.style.display = "none";
 
@@ -45,7 +38,7 @@ function resetFilters() {
     document.getElementById("no-results-message");
   noResultsMessageContainer.style.display = "none";
 }
-// Function to search and filter student records
+
 function searchAndFilter() {
   const firstName = document.getElementById("firstName").value.toLowerCase();
   const lastName = document.getElementById("lastName").value.toLowerCase();
@@ -74,10 +67,9 @@ function searchAndFilter() {
   });
 
   displaySearchResults(searchResults);
-  return false; // Prevent form submission
+  return false;
 }
 
-// Function to get selected countries from checkboxes
 function getSelectedCountries() {
   const checkboxes = document.querySelectorAll(
     'input[name^="country"]:checked'
@@ -88,7 +80,6 @@ function getSelectedCountries() {
   return selectedCountries;
 }
 
-// Function to get stored user records from localStorage
 function getStoredUserRecords() {
   const storedRecords = localStorage.getItem("userRecords");
   return storedRecords ? JSON.parse(storedRecords) : [];
@@ -107,18 +98,15 @@ function displaySearchResults(results, currentPage = 1, resultsPerPage = 10) {
     document.getElementById("no-results-message");
 
   if (paginatedResults.length === 0) {
-    // No matching records found
-    resultsContainer.style.display = "block"; // Show the entire results container
-    resultsTable.style.display = "none"; // Hide the results table
+    resultsContainer.style.display = "block";
+    resultsTable.style.display = "none";
     paginationContainer.innerHTML = "";
-    // resultsTableBody.innerHTML =
-    //   '<tr><td colspan="8">No matching records found.</td></tr>';
+
     noResultsMessageContainer.style.display = "block";
   } else {
-    // Matching records found
-    resultsContainer.style.display = "block"; // Show the entire results container
-    resultsTable.style.display = "table"; // Show the results table
-    resultsTableBody.innerHTML = ""; // Clear previous results
+    resultsContainer.style.display = "block";
+    resultsTable.style.display = "table";
+    resultsTableBody.innerHTML = "";
     noResultsMessageContainer.style.display = "none";
     paginatedResults.forEach((result) => {
       const row = resultsTableBody.insertRow();
@@ -134,7 +122,6 @@ function displaySearchResults(results, currentPage = 1, resultsPerPage = 10) {
       `;
     });
 
-    // Display pagination links
     const totalPages = Math.ceil(results.length / resultsPerPage);
     paginationContainer.innerHTML = buildPaginationLinks(
       currentPage,
@@ -143,7 +130,6 @@ function displaySearchResults(results, currentPage = 1, resultsPerPage = 10) {
   }
 }
 
-// Function to build pagination links
 function buildPaginationLinks(currentPage, totalPages) {
   let paginationHTML = "";
 
@@ -156,9 +142,8 @@ function buildPaginationLinks(currentPage, totalPages) {
   return paginationHTML;
 }
 
-// Function to handle page change
 function changePage(pageNumber) {
-  const resultsPerPage = 10; // Change this to the desired number of results per page
+  const resultsPerPage = 10;
   const currentPage = pageNumber;
   const firstName = document.getElementById("firstName").value.toLowerCase();
   const lastName = document.getElementById("lastName").value.toLowerCase();
