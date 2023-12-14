@@ -1,8 +1,11 @@
 /* Career Opportunities: */
+
+/* General styling */
 body {
   background-color: rgba(214, 227, 193, 0.235);
 }
 
+/* Search Section */
 #search,
 #search form {
   display: flex;
@@ -28,22 +31,29 @@ body {
   color: rgb(0, 75, 141);
 }
 
-#search form input {
-  width: 200px;
-  height: 25px;
-  background-color: rgba(113, 196, 223, 0.249);
-  border-radius: 10px 10px;
-}
-
+#search form input,
 #search form select {
-  width: 100px;
-  height: 25px;
-  font-size: medium;
-  border: 2px solid rgb(54, 54, 54);
-  border-radius: 10px 10px;
+  width: 150px; /* Adjust width as needed */
+  margin: 5px;
   background-color: rgba(113, 196, 223, 0.249);
+  border-radius: 10px 10px;
+  border: 2px solid rgb(54, 54, 54);
+  font-size: medium;
 }
 
+#search img {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* Results Section */
+#content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Individual Job Section */
 .section2 {
   width: 700px;
   height: fit-content;
@@ -55,20 +65,14 @@ body {
   padding: 10px;
 }
 
+/* Dark black text class */
 .dark-black-text {
   color: red;
 }
 
-.section3 section {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-
-  /* padding: 10px; */
-}
-
+/* Filters Section */
 .section3 {
-  margin-top: 25px;
+  margin-top: 15px;
   margin-left: 10px;
   align-items: center;
   padding: 20px;
@@ -76,8 +80,11 @@ body {
   color: #333; /* Dark text color */
   border-radius: 12px;
   box-shadow: 15px 15px 7px rgba(0, 0, 0, 0.153); /* Subtle box shadow */
-  max-height: 500px; /* Set your desired maximum height */
+  max-height: 450px; /* Set your desired maximum height */
   overflow-y: auto; /* Add scrollbar if content exceeds the height */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .section3 h2 {
@@ -85,6 +92,7 @@ body {
   margin-bottom: 15px;
 }
 
+/* Filters Form Styling */
 div.section3 fieldset {
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -104,7 +112,6 @@ div.section3 input[type="checkbox"] {
 
 div.section3 button {
   background-color: #115583; /* Blue button color */
-  /* color: #fff; */
   padding: 8px 15px;
   border: none;
   border-radius: 5px;
@@ -115,17 +122,19 @@ div.section3 button {
   letter-spacing: 1px;
 }
 
+.section3 section {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  /* padding: 10px; */
+}
+
 div.section3 button:hover {
   background-color: #2980b9; /* Darker blue on hover */
   transform: scale(1.25);
 }
 
-#content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
+/* Post Section Styling */
 .profile {
   color: rgba(97, 96, 96, 0.747);
 }
@@ -159,6 +168,7 @@ div.section3 button:hover {
   padding: 5px;
 }
 
+/* Grid Layout for Job Boxes */
 .wrapper {
   display: grid;
   grid-template-columns: 200px 200px 200px;
@@ -166,6 +176,7 @@ div.section3 button:hover {
   margin: 25px;
 }
 
+/* Individual Job Box Styling */
 .box {
   display: flex;
   justify-content: center;
@@ -175,7 +186,6 @@ div.section3 button:hover {
   width: 200px;
   height: 200px;
   perspective: 1000px;
-  background-color: white;
 }
 
 .flip-box-inner {
@@ -183,9 +193,8 @@ div.section3 button:hover {
   transition: transform 0.6s;
 }
 
-.flip-box-front {
-  box-shadow: 15px 15px 7px rgba(0, 0, 0, 0.153); /* Subtle box shadow */
-  border-radius: 12px 12px;
+.flip-box-front,
+.flip-box-back {
   position: absolute;
   backface-visibility: hidden;
 }
@@ -193,24 +202,53 @@ div.section3 button:hover {
 .flip-box-back {
   box-shadow: 2px 2px 7px rgb(117, 112, 112);
   border-radius: 12px 12px;
-  position: absolute;
-  backface-visibility: hidden;
   transform: rotateY(180deg);
   padding: 10px;
+  background-color: #fff; /* Set background color */
+  color: #333; /* Set text color */
+  height: 180px;
+}
+
+.flip-box-back h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.flip-box-back p {
+  font-size: 14px;
+}
+
+.flip-box-back button {
+  background-color: #115583;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.flip-box-back button:hover {
+  background-color: #2980b9;
+  transform: scale(1.25);
 }
 
 .flip-box-front img {
-  border-radius: 12px 12px;
+  background-color: white;
+  border-radius: 15px 15px;
+  box-shadow: 15px 15px 7px rgba(0, 0, 0, 0.153); /* Subtle box shadow */
 }
 
-#applybutton {
-  background-color: aliceblue;
-}
-
+/* Apply and Clear Button Styling */
+#applybutton,
 #clearbutton {
   background-color: aliceblue;
 }
 
+/* Centering Elements */
 .center {
   display: flex;
   justify-content: center;
@@ -218,28 +256,7 @@ div.section3 button:hover {
   text-align: center;
 }
 
-#search form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-#search form label {
-  padding: 10px;
-  font-size: larger;
-}
-
-#search form input,
-#search form select {
-  width: 150px; /* Adjust width as needed */
-  margin: 5px;
-}
-
-#search img {
-  cursor: pointer;
-  margin-left: 5px;
-}
-
+/* Responsive Design */
 @media screen and (max-width: 992px) {
   #content {
     display: flex;
@@ -252,5 +269,12 @@ div.section3 button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-gap: 40px;
+    margin: auto;
   }
 }

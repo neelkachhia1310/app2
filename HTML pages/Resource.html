@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Resource Exchange</title>
     <meta charset="utf-8" />
-    <script
-      src="https://kit.fontawesome.com/7ced19dc59.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link href="image/favicon.jpg" rel="icon" />
+    <title>Resource Exchange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.jpg" />
     <link rel="stylesheet" href="../CSS pages/resource-style.css" />
     <link rel="stylesheet" href="../CSS pages/header-style.css" />
     <link rel="stylesheet" href="../CSS pages/footer-style.css" />
@@ -16,16 +12,26 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/7ced19dc59.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </head>
   <body>
     <header>
       <section class="headerdesign">
         <a href="/index.html">
-          <img src="../images/logo.jpg" id="headerlogo" class="logoImage" />
+          <img
+            src="../images/logo.jpg"
+            id="headerlogo"
+            class="logoImage"
+            alt="Logo"
+          />
         </a>
         <a href="/index.html" class="logoText">
-          <h1 class="logoText">College Connect</h1></a
-        >
+          <h1 class="logoText">College Connect</h1>
+        </a>
       </section>
     </header>
 
@@ -46,23 +52,24 @@
         <li><a href="../HTML pages/donation.html">Donation</a></li>
       </ul>
     </nav>
+
     <main>
       <div>
         <div class="section1">
           <h3>Recent</h3>
           <ul>
-            <li><a href="">The spark foundation Network</a></li>
-            <li><a href="">International Conference</a></li>
-            <li><a href="">Flutter</a></li>
-            <li><a href="">Engineerning</a></li>
+            <li><a href="#">The Spark Foundation Network</a></li>
+            <li><a href="#">International Conference</a></li>
+            <li><a href="#">Flutter</a></li>
+            <li><a href="#">Engineering</a></li>
           </ul>
 
           <h3>Group</h3>
           <ul>
-            <li><a href="">The spark foundation Network</a></li>
-            <li><a href="">Internship</a></li>
-            <li><a href="">Part-time openings</a></li>
-            <li><a href="">Important Resource</a></li>
+            <li><a href="#">The Spark Foundation Network</a></li>
+            <li><a href="#">Internship</a></li>
+            <li><a href="#">Part-time Openings</a></li>
+            <li><a href="#">Important Resource</a></li>
           </ul>
         </div>
       </div>
@@ -121,6 +128,7 @@
             huge impact on the world.
           </p>
           <img
+            id="hiring_img"
             src="../images/hiring.jpeg"
             alt="hiring image"
             height="500px"
@@ -214,29 +222,27 @@
       </div>
       <div>
         <div class="section3">
-          <div>
-            <!-- use js & form here  -->
-            <form name="post" action="" method="get" class="post">
-              <h3>Write your post here!</h3>
-              <input
-                type="text"
-                id="post_text"
-                placeholder="Write your LinkedIn post here..."
-              />
-            </form>
-            <span id="error_message"></span>
-            <div class="post_button_container">
-              <button id="post_button" onclick="addTask()">Post</button>
-            </div>
-            <ul id="post_section">
-              <li>📰 Media</li>
-              <li>🗓️ Event</li>
-              <li>📝 Write article</li>
-            </ul>
+          <form name="post" action="" method="get" class="post">
+            <h3>Write your post here!</h3>
+            <input
+              type="text"
+              id="post_text"
+              placeholder="Write your LinkedIn post here..."
+            />
+          </form>
+          <span id="error_message"></span>
+          <div class="post_button_container">
+            <button id="post_button" onclick="addTask()">Post</button>
           </div>
+          <ul id="post_section">
+            <li>📰 Media</li>
+            <li>🗓️ Event</li>
+            <li>📝 Write article</li>
+          </ul>
         </div>
       </div>
     </main>
+
     <footer>
       <div class="footer-container">
         <div class="footer-section">

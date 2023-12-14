@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Messages</title>
-    <meta charset="uft-8" />
+    <meta charset="utf-8" />
+    <title>Messages - College Connect</title>
     <script
       src="https://kit.fontawesome.com/7ced19dc59.js"
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link href="/image/favicon.jpg" rel="icon" />
-
-    <link rel="stylesheet" href="../CSS pages/header-style.css" />
-    <link rel="stylesheet" href="../CSS pages/footer-style.css" />
-    <link rel="stylesheet" href="../CSS pages/messages-style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../CSS pages/header-style.css" />
+    <link rel="stylesheet" href="../CSS pages/footer-style.css" />
+    <link rel="stylesheet" href="../CSS pages/messages-style.css" />
   </head>
   <body>
     <header>
       <section class="headerdesign">
         <a href="/index.html">
-          <img src="../images/logo.jpg" id="headerlogo" class="logoImage" />
+          <img
+            src="../images/logo.jpg"
+            id="headerlogo"
+            class="logoImage"
+            alt="College Connect Logo"
+          />
         </a>
         <a href="/index.html" class="logoText">
-          <h1 class="logoText">College Connect</h1></a
-        >
+          <h1 class="logoText">College Connect</h1>
+        </a>
       </section>
     </header>
 
@@ -40,62 +44,101 @@
         <li><a href="../HTML pages/events.html">Events</a></li>
         <li><a href="../HTML pages/Blogs.html">Blogs and Articles</a></li>
         <li><a href="../HTML pages/Resource.html">Resource</a></li>
-        <li><a href="../HTML pages/carrer-opp.html">Career</a></li>
+        <li><a href="../HTML pages/career-opp.html">Career</a></li>
         <li>
           <a href="../HTML pages/searchandfilter.html">Search and Filter</a>
         </li>
         <li><a href="../HTML pages/donation.html">Donation</a></li>
       </ul>
     </nav>
+
     <main>
       <div id="sidebar">
         <div id="chat_style"><p>Chats</p></div>
         <div id="total_chats">
+          <!-- Sample people and group sections -->
           <section class="people">
-            <img src="../images/man.png" height="50px" width="50px" />
-            <h3>Jhon shina</h3>
+            <img
+              src="../images/man.png"
+              height="50px"
+              width="50px"
+              alt="Profile Image"
+            />
+            <h3>Jhon Shina</h3>
             <div class="sub_message">You: Hi</div>
           </section>
           <section class="group">
-            <img src="../images/group.webp" height="50px" width="50px" />
+            <img
+              src="../images/group.webp"
+              height="50px"
+              width="50px"
+              alt="Group Image"
+            />
             <h3>ITS5103 - Web Progr..</h3>
             <div class="sub_message">Neel: Thank you!</div>
           </section>
           <section class="people">
-            <img src="../images/man.png" height="50px" width="50px" />
+            <img
+              src="../images/man.png"
+              height="50px"
+              width="50px"
+              alt="Profile Image"
+            />
             <h3>Hemangkumar Patel</h3>
             <div class="sub_message">You: Great!</div>
           </section>
           <section class="people">
-            <img src="../images/man.png" height="50px" width="50px" />
+            <img
+              src="../images/man.png"
+              height="50px"
+              width="50px"
+              alt="Profile Image"
+            />
             <h3>krushil Mehta</h3>
             <div class="sub_message">You: Hi</div>
           </section>
           <section class="group">
-            <img src="../images/group.webp" height="50px" width="50px" />
+            <img
+              src="../images/group.webp"
+              height="50px"
+              width="50px"
+              alt="Group Image"
+            />
             <h3>Jeel, john and others</h3>
             <div class="sub_message">Neel: Thank you!</div>
           </section>
           <section class="people">
-            <img src="../images/man.png" height="50px" width="50px" />
+            <img
+              src="../images/man.png"
+              height="50px"
+              width="50px"
+              alt="Profile Image"
+            />
             <h3>Hemangkumar Patel</h3>
             <div class="sub_message">You: Great!</div>
           </section>
         </div>
       </div>
+
       <div id="preview">
         <div id="hearder_of_people">
-          <img src="../images/man.png" height="30px" width="30px" />
-          <p>krushil Mehta</p>
+          <img
+            src="../images/man.png"
+            height="30px"
+            width="30px"
+            alt="Profile Image"
+          />
+          <p>Krushil Mehta</p>
         </div>
         <div id="conversation">
+          <!-- Sample conversation content -->
           <div class="my_message">
-            <div><p>hey!</p></div>
-            <div><p>How are you krushil.</p></div>
+            <div><p>Hey!</p></div>
+            <div><p>How are you Krushil.</p></div>
           </div>
           <div class="my_reply">
             <div><p>Hi!</p></div>
-            <div><p>i'm doing good</p></div>
+            <div><p>I'm doing good</p></div>
             <div id="message_here"></div>
           </div>
           <div class="read" style="color: rgba(183, 186, 186, 0.728)">
@@ -106,20 +149,11 @@
           <input
             type="text"
             id="post_comment"
-            placeholder="start your message.."
+            placeholder="Start your message..."
           />
-          <img src="../images/send.png" height="30px" onclick="addmessage()" />
+          <img src="../images/send.png" id="post_button" height="30px" />
         </div>
       </div>
-      <!-- <div class="Chat">
-        <img
-          src="../images/chat.jpeg"
-          class="chat_img"
-          alt="chat"
-          height="50px"
-          width="50px"
-        />
-      </div> -->
     </main>
 
     <footer>
@@ -157,6 +191,8 @@
         <p>&copy; 2023 College Connect</p>
       </div>
     </footer>
+
+    <!-- Include scripts at the end for faster page loading -->
     <script src="/javascript/header.js"></script>
     <script src="../javascript/messages.js"></script>
   </body>

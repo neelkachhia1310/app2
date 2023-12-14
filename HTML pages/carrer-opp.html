@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Career Opportunities:</title>
-    <meta charset="uft-8" />
+    <title>Career Opportunities</title>
+    <meta charset="utf-8" />
     <script
       src="https://kit.fontawesome.com/7ced19dc59.js"
       crossorigin="anonymous"
@@ -21,19 +21,23 @@
     <header>
       <section class="headerdesign">
         <a href="index.html">
-          <img src="../images/logo.jpg" id="headerlogo" class="logoImage" />
+          <img
+            src="../images/logo.jpg"
+            id="headerlogo"
+            class="logoImage"
+            alt="Logo"
+          />
         </a>
         <a href="index.html" class="logoText">
-          <h1 class="logoText">College Connect</h1></a
-        >
+          <h1 class="logoText">College Connect</h1>
+        </a>
       </section>
     </header>
 
     <nav id="com_nav">
       <ul class="com_nav_menu">
-        <li class="com_nav_menu_name">
-          <a href="/index.html">Home</a>
-        </li>
+        <!-- Navigation Links -->
+        <li class="com_nav_menu_name"><a href="/index.html">Home</a></li>
         <li><a href="../HTML pages/profile.html">Profiles</a></li>
         <li><a href="../HTML pages/messages.html">Chat</a></li>
         <li><a href="../HTML pages/events.html">Events</a></li>
@@ -46,10 +50,12 @@
         <li><a href="../HTML pages/donation.html">Donation</a></li>
       </ul>
     </nav>
+
     <main>
       <div id="search" class="center">
-        <h2>Search jobs</h2>
+        <h2>Search Jobs</h2>
         <form name="myform" action="" method="get" class="center">
+          <!-- Search Form -->
           <label for="keyword">Keyword</label>
           <input type="text" name="keyword" id="keyword" />
 
@@ -73,6 +79,7 @@
           </a>
         </form>
       </div>
+
       <div id="content">
         <div class="wrapper">
           <div class="box A">
@@ -341,8 +348,9 @@
           </div>
         </div>
         <div class="section3">
+          <!-- Filter Section -->
           <div>
-            <h2>Apply Fillter</h2>
+            <h2>Apply Filter</h2>
             <form name="myform" action="" method="post">
               <fieldset>
                 <legend>Remote Positions</legend>
@@ -357,31 +365,44 @@
               <br />
               <fieldset>
                 <legend>Employment Type</legend>
-                <input type="checkbox" name="type1" value="flex" />Flex<br />
+                <!-- Checkbox options -->
                 <input
                   type="checkbox"
+                  id="type1"
+                  name="type1"
+                  value="flex"
+                />Flex<br />
+                <input
+                  type="checkbox"
+                  id="type2"
                   name="type2"
                   value="Medical Professional"
                 />Medical Professional<br />
                 <input
                   type="checkbox"
+                  id="type3"
                   name="type3"
                   value="Seasonal"
                 />Seasonal<br />
                 <input
                   type="checkbox"
+                  id="type4"
                   name="type4"
                   value="Temporary"
                 />Temporary (Fixed Term)<br />
                 <input
                   type="checkbox"
-                  name="type"
+                  id="type5"
+                  name="type5"
                   value="Regular/Permanent"
                 />Regular/Permanent
               </fieldset>
               <br />
+
+              <br />
             </form>
             <section>
+              <!-- Buttons for applying and clearing filters -->
               <button onclick="applyFilters()" id="applybutton">Apply</button>
               <button onclick="clearFilters()" id="clearbutton">Clear</button>
             </section>
@@ -389,28 +410,24 @@
         </div>
       </div>
     </main>
+
     <footer>
+      <!-- Footer Section -->
       <div class="footer-container">
+        <!-- Contact Section -->
         <div class="footer-section">
           <h3>Contact Us</h3>
           <p>Email: info@collegeconnect.com</p>
           <p>Phone: +1 (123) 456-7890</p>
         </div>
+        <!-- Follow Us Section -->
         <div class="footer-section">
           <h3>Follow Us</h3>
           <ul class="social-icons">
-            <li>
-              <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            </li>
+            <!-- Social Icons -->
           </ul>
         </div>
-
+        <!-- Quick Links Section -->
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul class="quick-links">
@@ -420,10 +437,13 @@
           </ul>
         </div>
       </div>
+      <!-- Bottom Section -->
       <div class="footer-bottom">
         <p>&copy; 2023 College Connect</p>
       </div>
     </footer>
+
+    <!-- Script Tags -->
     <script src="/javascript/header.js"></script>
     <script src="../javascript/career.js"></script>
   </body>

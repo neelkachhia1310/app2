@@ -1,14 +1,13 @@
 /* message page */
 
+/* Sidebar Styles */
 #sidebar {
-  /* border-right: 2px solid rgb(167, 167, 167); */
-  /* box-shadow: 0px 0px 7px rgb(70, 69, 69); */
   box-shadow: 5px 5px 5px 5px rgb(231, 218, 218);
-
   border-radius: 15px 0px 0px 15px;
   background: linear-gradient(to left, white, rgba(113, 216, 216, 0.292));
 }
 
+/* Preview Styles */
 #preview {
   border-right: 1px solid rgb(245, 227, 227);
   box-shadow: 5px 5px 5px 5px rgb(231, 218, 218);
@@ -16,6 +15,7 @@
   background: linear-gradient(to right, white, rgba(113, 216, 216, 0.292));
 }
 
+/* Main Section Styles */
 main {
   display: grid;
   column-gap: 0px;
@@ -25,20 +25,32 @@ main {
   padding: 10px;
 }
 
-.people {
-  border-bottom: 1px solid rgb(180, 177, 177);
-  box-shadow: 3px 2px 5px 5px rgb(172, 170, 170);
-  border-radius: 5px;
+/* People and Group Styles */
+.people,
+.group {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   margin: 10px;
-  padding: 7px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-.people img {
+.people:hover,
+.group:hover {
+  transform: scale(1.05);
+}
+
+/* Chat Styles */
+.people img,
+.group img {
   float: left;
   padding-right: 15px;
 }
 
-.people h3 {
+.people h3,
+.group h3 {
   margin: 10px;
 }
 
@@ -46,43 +58,7 @@ main {
   color: rgba(145, 145, 145, 0.808);
 }
 
-.group {
-  border-bottom: 1px solid rgb(180, 177, 177);
-  box-shadow: 3px 2px 5px 5px rgb(172, 170, 170);
-  border-radius: 5px;
-  margin: 10px;
-  padding: 7px;
-}
-
-.group img {
-  float: left;
-  padding-right: 15px;
-}
-
-.group h3 {
-  margin: 10px;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#total_chats {
-  overflow-y: auto; /* Added overflow-y to make it scrollable */
-  max-height: 310px;
-}
-
-#chat_style {
-  text-align: center;
-  background-color: rgba(113, 216, 216, 0.477);
-  border-radius: 15px 0px 0px 0px;
-}
-
-#chat_style p {
-  padding: 16px;
-  margin: 0px 0px;
-}
-
+/* Header of People Styles */
 #hearder_of_people {
   background-color: rgba(113, 216, 216, 0.477);
   display: grid;
@@ -100,28 +76,20 @@ body {
   padding-left: 15px;
 }
 
-/* #preview p {
-  width: 150px;
-  background-color: rgba(139, 140, 139, 0.377);
-  border: 1px solid rgb(180, 177, 177);
-  border-radius: 5px;
-} */
-
+/* Conversation Styles */
 #conversation {
   padding: 15px;
   display: flex;
   height: 250px;
   flex-direction: column;
-  overflow-y: auto; /* Added overflow-y to make it scrollable */
-  max-height: 250px; /* Added max-height to limit the height and enable scrolling */
+  overflow-y: auto;
+  max-height: 250px;
 }
 
+/* My Message Styles */
 .my_message div {
   padding: 2px;
-  /* background-color: rgba(139, 140, 139, 0.377); */
   width: auto;
-  /* border: 1px solid rgb(180, 177, 177);
-  border-radius: 5px; */
   display: flex;
   justify-content: end;
 }
@@ -136,17 +104,10 @@ body {
   display: flex;
   justify-content: end;
 }
-/* #conversation .my_reply {
-  display: flex;
-  justify-content: end;
-} */
 
+/* My Reply Styles */
 .my_reply div {
-  /* padding: 5px; */
-  /* background-color: antiquewhite; */
   width: auto;
-  /* border: 1px solid rgb(180, 177, 177);
-  border-radius: 5px 5px 5px; */
 }
 
 .my_reply p {
@@ -163,37 +124,21 @@ body {
   grid-area: 1 / col4-start / last-line / 6;
 }
 
-/* #send_img {
-  padding-top: 10px;
-  padding-left: 5px;
-} */
-
+/* Type Message Styles */
 #type_message input {
   background-color: aliceblue;
   border: 1px solid rgb(180, 177, 177);
   border-radius: 10px;
   display: flex;
 }
-/* 
-.chat {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
-.chat_img {
-  align-self: flex-end; /
-  margin-bottom: 10px; 
-  margin-right: 10px;
-} */
-
+/* Comment Styles */
 .comment {
   display: flex;
   flex-direction: row;
   margin-left: 15px;
   margin-right: 15px;
-  /* border: 1px solid rgb(230, 227, 227); */
-  /* border-radius: 15px 15px; */
+  position: relative;
 }
 
 .comment input {
@@ -202,5 +147,71 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   border: 0px solid rgba(0, 0, 0, 0);
-  width: 825px;
+  width: 100%; /* Adjusted width for responsiveness */
+}
+
+/* Post Button Styles */
+#post_button {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+#post_button:hover {
+  transform: scale(1.4);
+}
+
+/* Additional Styles */
+#total_chats {
+  overflow-y: auto; /* Added overflow-y to make it scrollable */
+  max-height: 307px;
+  padding-left: 7px;
+}
+
+#chat_style {
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  background-color: rgba(113, 216, 216, 0.477);
+  border-radius: 15px 0px 0px 0px;
+}
+
+#chat_style p {
+  padding: 12px;
+  margin: 0px 0px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 992px) {
+  main {
+    grid-template-columns: 100%; /* Change to a single column layout */
+  }
+
+  #preview {
+    border-right: none; /* Remove right border for single column layout */
+    border-radius: 0px 0px 15px 15px; /* Adjust border-radius for a cleaner look */
+  }
+
+  #sidebar,
+  #preview {
+    box-shadow: none; /* Remove box shadow for a cleaner look on smaller screens */
+  }
+
+  .people,
+  .group {
+    margin: 10px 0; /* Adjust margin for better spacing on smaller screens */
+  }
+
+  #conversation {
+    height: auto; /* Adjust height to auto for better responsiveness */
+    max-height: none; /* Remove max-height for better responsiveness */
+  }
+
+  .my_message p,
+  .my_reply p {
+    width: 20%; /* Adjust width for better responsiveness */
+  }
+
+  #type_message input,
+  .comment input {
+    width: calc(100% - 20px); /* Adjust width for better responsiveness */
+  }
 }
