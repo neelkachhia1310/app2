@@ -197,7 +197,7 @@ main {
 
   .people,
   .group {
-    margin: 10px 0; /* Adjust margin for better spacing on smaller screens */
+    margin: 10px 10px; /* Adjust margin for better spacing on smaller screens */
   }
 
   #conversation {
