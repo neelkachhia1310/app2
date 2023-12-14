@@ -13,37 +13,36 @@ function flip(clickedElement) {
   }
   
 
+  
   function applyFilters() {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    const selectedCompanies = ["a", "d", "k", "j", "i"];
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    const radioButtons = document.querySelectorAll('input[type="radio"]:checked');
 
-    // Apply dark-black class to selected checkboxes
-    checkboxes.forEach((checkbox) => {
-        const label = document.querySelector(`label[for="${checkbox.id}"]`);
-        if (checkbox.checked && label) {
-            label.classList.style.color = "red";
-        } else {
-            abel.classList.style.color = "black";
-        }
-    });
+    // Check if at least one checkbox or radio button is selected
+    if (checkboxes.length > 0 || radioButtons.length > 0) {
+        // Hide all boxes initially
+        const allBoxes = document.querySelectorAll('.box');
+        allBoxes.forEach(box => box.style.display = 'none');
 
-    // Apply dark-black class to selected radio buttons
-    radioButtons.forEach((radio) => {
-        const label = document.querySelector(`label[for="${radio.id}"]`);
-        if (radio.checked && label) {
-            label.classList.style.color = "red";
-        } else {
-            label.classList.style.color = "black";
-        }
-    });
+        // Show only selected boxes
+        selectedCompanies.forEach(company => {
+            const box = document.querySelector(`.box.${company}`);
+            if (box) {
+                box.style.display = 'flex';
+            }
+        });
+    } else {
+        // If no checkbox or radio button is selected, show all boxes
+        const allBoxes = document.querySelectorAll('.box');
+        allBoxes.forEach(box => box.style.display = 'flex');
+    }
 }
 
 
 
-// label.style.color = "red";
-  
 
-  function clearFilters() {
+function clearFilters() {
     // Get all checkboxes and radio buttons within the form
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     const radioButtons = document.querySelectorAll('input[type="radio"]');
@@ -51,12 +50,39 @@ function flip(clickedElement) {
     // Uncheck all checkboxes
     checkboxes.forEach((checkbox) => {
         checkbox.checked = false;
+        
     });
 
     // Uncheck all radio buttons
     radioButtons.forEach((radio) => {
         radio.checked = false;
     });
+
+    const allBoxes = document.querySelectorAll('.box');
+        allBoxes.forEach(box => box.style.display = 'flex');
 }
 
   
+function flipBackByKeyword(keyword) {
+    const flipBoxes = document.querySelectorAll('.flip-box');
+
+    flipBoxes.forEach(flipBox => {
+        const flipBoxBack = flipBox.querySelector('.flip-box-back');
+        const companyName = flipBoxBack.querySelector('h2').innerText.toLowerCase();
+
+        if (companyName.includes(keyword.toLowerCase())) {
+            flipBox.querySelector('.flip-box-inner').style.transform = "rotateY(180deg)";
+        }
+    });
+}
+
+function performSearch() {
+    const keywordInput = document.forms['myform']['keyword'];
+    const keyword = keywordInput.value.trim();
+
+    // Check if the keyword is not empty
+    if (keyword !== '') {
+        // Call the function to flip back based on the keyword
+        flipBackByKeyword(keyword);
+    }
+}

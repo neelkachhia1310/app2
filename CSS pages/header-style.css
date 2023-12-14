@@ -100,7 +100,7 @@ header {
   z-index: -1;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 992px) {
   #com_nav {
     box-shadow: none;
   }

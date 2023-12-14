@@ -247,8 +247,10 @@ p {
     justify-content: center;
   }
 
-  .section1 {
-    width: 500px;
+  .section1,
+  .section2,
+  .section3 {
+    width: auto;
     height: fit-content;
     margin: 20px;
     border: 2px solid rgb(126, 123, 123);
@@ -256,5 +258,23 @@ p {
     border-radius: 15px 15px;
     background-color: white;
     padding: 10px;
+  }
+
+  * iframe {
+    height: 50%;
+    width: 50%;
+    text-align: center;
+  }
+
+  #hiring_img {
+    width: 50%;
+    height: 50%;
+  }
+
+  .section3 {
+    text-align: center;
+  }
+  #post_text {
+    width: auto;
   }
 }

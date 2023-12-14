@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Profile</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link href="image/favicon.jpg" rel="icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.jpg" />
     <link rel="stylesheet" href="../CSS pages/profile_style.css" />
-    <link rel="stylesheet" href="/CSS pages/header-style.css" />
-    <link rel="stylesheet" href="/CSS pages/footer-style.css" />
+    <link rel="stylesheet" href="../CSS pages/header-style.css" />
+    <link rel="stylesheet" href="../CSS pages/footer-style.css" />
   </head>
   <body>
     <header>
       <section class="headerdesign">
-        <a href="/HTML pages/home.html">
+        <a href="../index.html">
           <img src="/images/logo.jpg" id="headerlogo" class="logoImage" />
         </a>
-        <a href="/HTML pages/home.html" class="logoText">
+        <a href="../index.html" class="logoText">
           <h1 class="logoText">College Connect</h1></a
         >
       </section>
@@ -24,7 +27,7 @@
     <nav id="com_nav">
       <ul class="com_nav_menu">
         <li class="com_nav_menu_name">
-          <a href="/HTML pages/home.html">Home</a>
+          <a href="../index.html">Home</a>
         </li>
         <li><a href="/HTML pages/profile.html">Profiles</a></li>
         <li><a href="/HTML pages/messages.html">Chat</a></li>
@@ -40,117 +43,184 @@
     </nav>
 
     <main>
-        <div class="profile">
-          <div class="box profile-photo">
-              <img src="../images/man.png" alt="Profile Photo">
-              <h2 id="Name">Name: Hemang Patel <span class="edit-icon" onclick="editProfile('Name')">✎</span></h2>
-              <p id="instituteName">Institute Name: Humber College <span class="edit-icon" onclick="editProfile('instituteName')">✎</span></p>
-          </div>
-          <div class="box contact-info">
-              <h2>Contact Information</h2>
-              <p id="email">Email: hemang@patel.com <span class="edit-icon" onclick="editProfile('email')">✎</span></p>
-              <p id="phone">Phone: 123-456-7890 <span class="edit-icon" onclick="editProfile('phone')">✎</span></p>
-          </div>
-          <div class="box expertise-info">
-              <h2>Expertise</h2>
-              <p id="expertise1">Web Development <span class="edit-icon" onclick="editProfile('expertise1')">✎</span></p>
-              <p id="expertise2">Java Programming <span class="edit-icon" onclick="editProfile('expertise2')">✎</span></p>
-              <p id="expertise3">Operating System <span class="edit-icon" onclick="editProfile('expertise1')">✎</span></p>
-              <p id="expertise4">ReactJS <span class="edit-icon" onclick="editProfile('expertise2')">✎</span></p>
-          </div>
-          <div class="box basic-info">
-              <h2>Basic Information</h2>
-              <p id="home">Home: Etobicoke, Canada <span class="edit-icon" onclick="editProfile('home')">✎</span></p>
-              <p id="gender">Gender: Male <span class="edit-icon" onclick="editProfile('gender')">✎</span></p>
-          </div>
-          <div class="box about-myself">
-              <h2>About Myself</h2>
-              <p id="aboutMe">As a web developer, my role revolves around crafting and maintaining websites. I leverage my proficiency in programming languages like HTML, CSS, and JavaScript to shape the structure, style, and interactivity of the sites. Depending on the focus, I might specialize in front-end development, emphasizing the user interface, or back-end development, handling server-side logic and databases. <span class="edit-icon" onclick="editProfile('aboutMe')">✎</span></p>
-          </div>
-          <div class="box education-info">
-              <h2>Education</h2>
-              <p id="degree">Degree: Bachelor's <span class="edit-icon" onclick="editProfile('degree')">✎</span></p>
-              <p id="fieldOfStudy">Field: Information Technlogy <span class="edit-icon" onclick="editProfile('fieldOfStudy')">✎</span></p>
-          </div>
-          <div class="box work-experience">
-              <h2>Work Experience</h2>
-              <p id="position">Position: Web Developer Intern <span class="edit-icon" onclick="editProfile('position')">✎</span></p>
-              <p id="company">Company: Kintu Designs <span class="edit-icon" onclick="editProfile('company')">✎</span></p>
-          </div>
-          <div class="box achievements">
-            <h2>Achievements</h2>
-            <ul id="achievementsList">
-              <li>Crash Course on Python</li>
-              <li>Google Cloud Certifications</li>
-            </ul>
-            <button onclick="addToListWithForm('achievementsList', 'Add Accomplishment')">Add Accomplishment</button>
-          </div>
-  
-          <div class="box projects">
-            <h2>Projects</h2>
-            <ul id="projectsList">
-              <li>Hospital Management System</li>
-              <li>E-Commerece Site</li>
-            </ul>
-            <button onclick="addToListWithForm('projectsList', 'Add Project')">Add Project</button>
-          </div>
-  
-          <div class="box skills">
-            <h2>Skills</h2>
-            <ul id="skillsList">
-              <li>Database and SQL server</li>
-              <li>Java Programming</li>
-            </ul>
-            <button onclick="addToListWithForm('skillsList', 'Add Skill')">Add Skill</button>
-          </div>
-          <div class="box testimonials">
-            <h2>Testimonials</h2>
-            <ul>
-              <li>"I had a great experience collaborating with Hemang on a project. Highly recommended!"</li>
-              <li>"Hemang's expertise in [field] is truly impressive. Always a pleasure to work together."</li>
-            </ul>
-            <button onclick="addTestimonial()">Add Testimonial</button>
-          </div>
-      </div>
-  
-      </main>
+      <div class="profile">
+        <div class="box profile-photo">
+          <img src="../images/man.png" alt="Profile Photo" />
+          <h2 id="Name">
+            Name: Hemang Patel
+            <span class="edit-icon" onclick="editProfile('Name')">✎</span>
+          </h2>
+          <p id="instituteName">
+            Institute Name: Humber College
+            <span class="edit-icon" onclick="editProfile('instituteName')"
+              >✎</span
+            >
+          </p>
+        </div>
+        <div class="box contact-info">
+          <h2>Contact Information</h2>
+          <p id="email">
+            Email: hemang@patel.com
+            <span class="edit-icon" onclick="editProfile('email')">✎</span>
+          </p>
+          <p id="phone">
+            Phone: 123-456-7890
+            <span class="edit-icon" onclick="editProfile('phone')">✎</span>
+          </p>
+        </div>
+        <div class="box expertise-info">
+          <h2>Expertise</h2>
+          <p id="expertise1">
+            Web Development
+            <span class="edit-icon" onclick="editProfile('expertise1')">✎</span>
+          </p>
+          <p id="expertise2">
+            Java Programming
+            <span class="edit-icon" onclick="editProfile('expertise2')">✎</span>
+          </p>
+          <p id="expertise3">
+            Operating System
+            <span class="edit-icon" onclick="editProfile('expertise1')">✎</span>
+          </p>
+          <p id="expertise4">
+            ReactJS
+            <span class="edit-icon" onclick="editProfile('expertise2')">✎</span>
+          </p>
+        </div>
+        <div class="box basic-info">
+          <h2>Basic Information</h2>
+          <p id="home">
+            Home: Etobicoke, Canada
+            <span class="edit-icon" onclick="editProfile('home')">✎</span>
+          </p>
+          <p id="gender">
+            Gender: Male
+            <span class="edit-icon" onclick="editProfile('gender')">✎</span>
+          </p>
+        </div>
+        <div class="box about-myself">
+          <h2>About Myself</h2>
+          <p id="aboutMe">
+            As a web developer, my role revolves around crafting and maintaining
+            websites. I leverage my proficiency in programming languages like
+            HTML, CSS, and JavaScript to shape the structure, style, and
+            interactivity of the sites. Depending on the focus, I might
+            specialize in front-end development, emphasizing the user interface,
+            or back-end development, handling server-side logic and databases.
+            <span class="edit-icon" onclick="editProfile('aboutMe')">✎</span>
+          </p>
+        </div>
+        <div class="box education-info">
+          <h2>Education</h2>
+          <p id="degree">
+            Degree: Bachelor's
+            <span class="edit-icon" onclick="editProfile('degree')">✎</span>
+          </p>
+          <p id="fieldOfStudy">
+            Field: Information Technlogy
+            <span class="edit-icon" onclick="editProfile('fieldOfStudy')"
+              >✎</span
+            >
+          </p>
+        </div>
+        <div class="box work-experience">
+          <h2>Work Experience</h2>
+          <p id="position">
+            Position: Web Developer Intern
+            <span class="edit-icon" onclick="editProfile('position')">✎</span>
+          </p>
+          <p id="company">
+            Company: Kintu Designs
+            <span class="edit-icon" onclick="editProfile('company')">✎</span>
+          </p>
+        </div>
+        <div class="box achievements">
+          <h2>Achievements</h2>
+          <ul id="achievementsList">
+            <li>Crash Course on Python</li>
+            <li>Google Cloud Certifications</li>
+          </ul>
+          <button
+            onclick="addToListWithForm('achievementsList', 'Add Accomplishment')"
+          >
+            Add Accomplishment
+          </button>
+        </div>
 
-      <footer>
-        <div class="footer-container">
-          <div class="footer-section">
-            <h3>Contact Us</h3>
-            <p>Email: info@collegeconnect.com</p>
-            <p>Phone: +1 (123) 456-7890</p>
-          </div>
-          <div class="footer-section">
-            <h3>Follow Us</h3>
-            <ul class="social-icons">
-              <li>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-              </li>
-            </ul>
-          </div>
-  
-          <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul class="quick-links">
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Careers</a></li>
-            </ul>
-          </div>
+        <div class="box projects">
+          <h2>Projects</h2>
+          <ul id="projectsList">
+            <li>Hospital Management System</li>
+            <li>E-Commerece Site</li>
+          </ul>
+          <button onclick="addToListWithForm('projectsList', 'Add Project')">
+            Add Project
+          </button>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2023 College Connect</p>
+
+        <div class="box skills">
+          <h2>Skills</h2>
+          <ul id="skillsList">
+            <li>Database and SQL server</li>
+            <li>Java Programming</li>
+          </ul>
+          <button onclick="addToListWithForm('skillsList', 'Add Skill')">
+            Add Skill
+          </button>
         </div>
-      </footer>
-    <script src="/javascript/header.js"></script>
-    <script src="/javascript/profile.js"></script>
-</body>
+        <div class="box testimonials">
+          <h2>Testimonials</h2>
+          <ul>
+            <li>
+              "I had a great experience collaborating with Hemang on a project.
+              Highly recommended!"
+            </li>
+            <li>
+              "Hemang's expertise in [field] is truly impressive. Always a
+              pleasure to work together."
+            </li>
+          </ul>
+          <button onclick="addTestimonial()">Add Testimonial</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@collegeconnect.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="quick-links">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 College Connect</p>
+      </div>
+    </footer>
+    <script src="../javascript/header.js"></script>
+    <script src="../javascript/profile.js"></script>
+  </body>
 </html>
