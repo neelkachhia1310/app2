@@ -1,0 +1,257 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li,
+form,
+table,
+td,
+th,
+input,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navigation styles */
+#com_nav {
+  background-color: #333;
+}
+
+#com_nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+#com_nav li {
+  margin: 0 15px;
+}
+
+#com_nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Main section styles */
+main {
+  padding: 20px;
+}
+
+.userFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.filter {
+  flex: 1 1 calc(33.333% - 20px); /* Adjusted for three filters per row */
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Added to stack label and input vertically */
+}
+
+/* Stylish Label Styles */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Input Styles */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+/* Input Focus Styles */
+input:focus,
+select:focus {
+  border-color: #4caf50;
+}
+
+/* Form styles */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Button Styles */
+button,
+#resetButton {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+/* Button Hover Styles */
+button:hover,
+#resetButton:hover {
+  background-color: #45a049;
+}
+
+/* Results container styles */
+#results-container {
+  margin-top: 20px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .filter {
+    flex: 1 1 100%;
+  }
+}
+
+/* Pagination Styles */
+#pagination-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#pagination-container a {
+  color: #fff;
+  padding: 10px 15px;
+  margin-right: 5px;
+  text-decoration: none;
+  background-color: #4caf50;
+  border: 1px solid #4caf50;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+#pagination-container a:hover {
+  background-color: #45a049;
+}
+
+#pagination-container .active {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+/* Results Table Styles */
+#results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#results-table th,
+#results-table td {
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+#results-table th {
+  background-color: #2ecc71;
+  color: #fff;
+  border-radius: 0 0 10px 0;
+}
+
+#results-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#results-table tr:hover {
+  background-color: #e0f7fa;
+  transition: background-color 0.3s;
+}
+#submit {
+  background-color: #2ecc71; /* Emerald green color */
+  color: #fff;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Submit Button Hover Styles */
+#submit:hover {
+  background-color: #27ae60; /* Darker green color on hover */
+  transform: scale(1.02); /* Scale the button slightly on hover */
+}
+/* No Results Message Styles */
+#no-results-message {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#no-results-message p {
+  margin: 0;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Adjustments for better visibility */
+#no-results-message p::before,
+#no-results-message p::after {
+  font-size: 24px;
+  color: #4caf50; /* Green color */
+  margin-right: 5px;
+}
+
+/* Reset Button Styles */
+#resetButton {
+  background-color: #ff6f61; /* Coral color */
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+/* Reset Button Hover Styles */
+#resetButton:hover {
+  background-color: #ff5349; /* Lighter coral color on hover */
+}

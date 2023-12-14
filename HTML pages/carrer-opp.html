@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Career Opportunities:</title>
+    <meta charset="uft-8" />
+    <script
+      src="https://kit.fontawesome.com/7ced19dc59.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link href="image/favicon.jpg" rel="icon" />
+    <link rel="stylesheet" href="../CSS pages/header-style.css" />
+    <link rel="stylesheet" href="../CSS pages/footer-style.css" />
+    <link rel="stylesheet" href="../CSS pages/career-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <section class="headerdesign">
+        <a href="index.html">
+          <img src="../images/logo.jpg" id="headerlogo" class="logoImage" />
+        </a>
+        <a href="index.html" class="logoText">
+          <h1 class="logoText">College Connect</h1></a
+        >
+      </section>
+    </header>
+
+    <nav id="com_nav">
+      <ul class="com_nav_menu">
+        <li class="com_nav_menu_name">
+          <a href="/index.html">Home</a>
+        </li>
+        <li><a href="../HTML pages/profile.html">Profiles</a></li>
+        <li><a href="../HTML pages/messages.html">Chat</a></li>
+        <li><a href="../HTML pages/events.html">Events</a></li>
+        <li><a href="../HTML pages/Blogs.html">Blogs and Articles</a></li>
+        <li><a href="../HTML pages/Resource.html">Resource</a></li>
+        <li><a href="../HTML pages/carrer-opp.html">Career</a></li>
+        <li>
+          <a href="../HTML pages/searchandfilter.html">Search and Filter</a>
+        </li>
+        <li><a href="../HTML pages/donation.html">Donation</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div id="search" class="center">
+        <h2>Search jobs</h2>
+        <form name="myform" action="" method="get" class="center">
+          <label for="keyword">Keyword</label>
+          <input type="text" name="keyword" id="keyword" />
+
+          <label for="location">Location</label>
+          <input type="text" name="Radius" id="Radius" />
+
+          <label for="Radius">Radius</label>
+          <select name="redius">
+            <option value="10KM" selected>10KM</option>
+            <option value="30KM">30KM</option>
+            <option value="50KM">50KM</option>
+          </select>
+
+          <a href="#" onclick="performSearch()">
+            <img
+              src="../images/search_icon.png"
+              alt="search"
+              height="30px"
+              width="30px"
+            />
+          </a>
+        </form>
+      </div>
+      <div id="content">
+        <div class="wrapper">
+          <div class="box A">
+            <div class="flip-box" onclick="flip(this)">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img
+                    src="../images/emerson.png"
+                    alt="emerson"
+                    height="200px"
+                    width="200px"
+                  />
+                </div>
+                <div class="flip-box-back">
+                  <h2>emerson</h2>
+                  <p>
+                    This is the great place to work. Leading provider of
+                    innovative solutions.
+                  </p>
+                  <a href="https://www.emerson.com/" target="_blank"
+                    ><button>Visit Emerson</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box b">
+            <div class="flip-box" onclick="flip(this)">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img
+                    src="../images/cognizant.png"
+                    alt="cognizant"
+                    height="200px"
+                    width="200px"
+                  />
+                </div>
+                <div class="flip-box-back">
+                  <h2>Cognizant</h2>
+                  <p>
+                    Leading IT company providing a wide range of services and
+                    solutions.
+                  </p>
+                  <a href="https://www.cognizant.com/" target="_blank"
+                    ><button>Visit Cognizant</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box c">
+            <div class="flip-box" onclick="flip(this)">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img
+                    src="../images/amazon.png"
+                    alt="amazon"
+                    height="200px"
+                    width="200px"
+                  />
+                </div>
+                <div class="flip-box-back">
+                  <h2>Amazon</h2>
+                  <p>
+                    Many openings here. Apply today for exciting career
+                    opportunities.
+                  </p>
+                  <a href="https://www.amazon.com/" target="_blank"
+                    ><button>Visit Amazon</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box d">
+            <div class="flip-box" onclick="flip(this)">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img
+                    src="../images/netflix.png"
+                    alt="netflix"
+                    height="200px"
+                    width="200px"
+                  />
+                </div>
+                <div class="flip-box-back">
+                  <h2>Netflix</h2>
+                  <p>
+                    Start a new movie of your life here. Join us for exciting
+                    projects.
+                  </p>
+                  <a href="https://www.netflix.com/" target="_blank"
+                    ><button>Visit Netflix</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box e">
+            <div class="flip-box" onclick="flip(this)">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img
+                    src="../images/tcs.png"
+                    alt="tcs"
+                    height="200px"
+                    width="200px"
+                  />
+                </div>
+                <div class="flip-box-back">
+                  <h2>TCS</h2>
+                  <p>
+                    Indian's biggest information technology solutions provider.
+                    Join us for a bright career.
+                  </p>
+                  <a href="https://www.tcs.com/" target="_blank"
+                    ><button>Visit TCS</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box f">
+            <div class="flip-box" onclick="flip(this)">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img
+                    src="../images/humber.webp"
+                    alt="humber"
+                    height="200px"
+                    width="200px"
+                  />
+                </div>
+                <div class="flip-box-back">
+                  <h2>Humber</h2>
+                  <p>
+                    This is the best college. Join us today for quality
+                    education.
+                  </p>
+                  <a href="https://humber.ca/" target="_blank"
+                    ><button>Visit Humber</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box g">
+            <div class="flip-box" onclick="flip(this)">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img
+                    src="../images/Audi.png"
+                    alt="Audi"
+                    height="200px"
+                    width="200px"
+                  />
+                </div>
+                <div class="flip-box-back">
+                  <h2>Audi</h2>
+                  <p>
+                    Experience the luxury and innovation of Audi. Apply for
+                    exciting roles.
+                  </p>
+                  <a href="https://www.audi.com/" target="_blank"
+                    ><button>Visit Audi</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box h">
+            <div class="flip-box" onclick="flip(this)">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img
+                    src="../images/bmw.png"
+                    alt="bmw"
+                    height="200px"
+                    width="200px"
+                  />
+                </div>
+                <div class="flip-box-back">
+                  <h2>BMW</h2>
+                  <p>
+                    Explore the world of BMW. Join us for a journey of
+                    innovation and excellence.
+                  </p>
+                  <a href="https://www.bmw.com/" target="_blank"
+                    ><button>Visit BMW</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box i">
+            <div class="flip-box" onclick="flip(this)">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img
+                    src="../images/nike.webp"
+                    alt="nike"
+                    height="200px"
+                    width="200px"
+                  />
+                </div>
+                <div class="flip-box-back">
+                  <h2>Nike</h2>
+                  <p>
+                    Just Do It! Explore career opportunities with Nike and be
+                    part of something great.
+                  </p>
+                  <a href="https://www.nike.com/" target="_blank"
+                    ><button>Visit Nike</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box j">
+            <div class="flip-box" onclick="flip(this)">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img
+                    src="../images/puma.png"
+                    alt="puma"
+                    height="200px"
+                    width="200px"
+                  />
+                </div>
+                <div class="flip-box-back">
+                  <h2>Puma</h2>
+                  <p>
+                    Join Puma for a career in sports and lifestyle. Exciting
+                    opportunities await.
+                  </p>
+                  <a href="https://www.puma.com/" target="_blank"
+                    ><button>Visit Puma</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box k">
+            <div class="flip-box" onclick="flip(this)">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img
+                    src="../images/apple.jpeg"
+                    alt="apple"
+                    height="200px"
+                    width="200px"
+                  />
+                </div>
+                <div class="flip-box-back">
+                  <h2>Apple</h2>
+                  <p>
+                    This is Apple. We are the best! Explore career opportunities
+                    with us.
+                  </p>
+                  <a href="https://www.apple.com/" target="_blank"
+                    ><button>Visit Apple</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section3">
+          <div>
+            <h2>Apply Fillter</h2>
+            <form name="myform" action="" method="post">
+              <fieldset>
+                <legend>Remote Positions</legend>
+                <input
+                  type="radio"
+                  name="Positions"
+                  value="yes"
+                  id="yes"
+                />Yes<br />
+                <input type="radio" name="Positions" value="no" id="no" />No
+              </fieldset>
+              <br />
+              <fieldset>
+                <legend>Employment Type</legend>
+                <input type="checkbox" name="type1" value="flex" />Flex<br />
+                <input
+                  type="checkbox"
+                  name="type2"
+                  value="Medical Professional"
+                />Medical Professional<br />
+                <input
+                  type="checkbox"
+                  name="type3"
+                  value="Seasonal"
+                />Seasonal<br />
+                <input
+                  type="checkbox"
+                  name="type4"
+                  value="Temporary"
+                />Temporary (Fixed Term)<br />
+                <input
+                  type="checkbox"
+                  name="type"
+                  value="Regular/Permanent"
+                />Regular/Permanent
+              </fieldset>
+              <br />
+            </form>
+            <section>
+              <button onclick="applyFilters()" id="applybutton">Apply</button>
+              <button onclick="clearFilters()" id="clearbutton">Clear</button>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@collegeconnect.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="quick-links">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 College Connect</p>
+      </div>
+    </footer>
+    <script src="/javascript/header.js"></script>
+    <script src="../javascript/career.js"></script>
+  </body>
+</html>

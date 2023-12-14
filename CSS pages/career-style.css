@@ -1,0 +1,256 @@
+/* Career Opportunities: */
+body {
+  background-color: rgba(214, 227, 193, 0.235);
+}
+
+#search,
+#search form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#search h2 {
+  color: rgba(13, 13, 83, 0.813);
+}
+
+#search form {
+  margin: 10px;
+}
+
+#search form label {
+  padding: 10px;
+  font-size: larger;
+}
+
+#submit {
+  margin-left: 20px;
+  color: rgb(0, 75, 141);
+}
+
+#search form input {
+  width: 200px;
+  height: 25px;
+  background-color: rgba(113, 196, 223, 0.249);
+  border-radius: 10px 10px;
+}
+
+#search form select {
+  width: 100px;
+  height: 25px;
+  font-size: medium;
+  border: 2px solid rgb(54, 54, 54);
+  border-radius: 10px 10px;
+  background-color: rgba(113, 196, 223, 0.249);
+}
+
+.section2 {
+  width: 700px;
+  height: fit-content;
+  margin: 20px;
+  border: 2px solid rgb(126, 123, 123);
+  box-shadow: 3px 3px 15px rgb(117, 112, 112);
+  border-radius: 15px 15px;
+  background-color: white;
+  padding: 10px;
+}
+
+.dark-black-text {
+  color: red;
+}
+
+.section3 section {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+
+  /* padding: 10px; */
+}
+
+.section3 {
+  margin-top: 25px;
+  margin-left: 10px;
+  align-items: center;
+  padding: 20px;
+  background-color: white; /* Light gray background */
+  color: #333; /* Dark text color */
+  border-radius: 12px;
+  box-shadow: 15px 15px 7px rgba(0, 0, 0, 0.153); /* Subtle box shadow */
+  max-height: 500px; /* Set your desired maximum height */
+  overflow-y: auto; /* Add scrollbar if content exceeds the height */
+}
+
+.section3 h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+div.section3 fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+div.section3 legend {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+div.section3 input[type="radio"],
+div.section3 input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+div.section3 button {
+  background-color: #115583; /* Blue button color */
+  /* color: #fff; */
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+div.section3 button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  transform: scale(1.25);
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.profile {
+  color: rgba(97, 96, 96, 0.747);
+}
+
+.post_image {
+  display: flex;
+  flex-direction: row;
+}
+
+.post_image img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+#post_section {
+  display: flex;
+  flex-direction: row;
+}
+
+#post_section li {
+  padding: 5px;
+  list-style-type: none;
+}
+
+.post {
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 1px solid rgb(86, 85, 85);
+  border-radius: 5px 5px;
+  padding: 5px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-gap: 40px;
+  margin: 25px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+}
+
+.flip-box {
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  background-color: white;
+}
+
+.flip-box-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-box-front {
+  box-shadow: 15px 15px 7px rgba(0, 0, 0, 0.153); /* Subtle box shadow */
+  border-radius: 12px 12px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.flip-box-back {
+  box-shadow: 2px 2px 7px rgb(117, 112, 112);
+  border-radius: 12px 12px;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  padding: 10px;
+}
+
+.flip-box-front img {
+  border-radius: 12px 12px;
+}
+
+#applybutton {
+  background-color: aliceblue;
+}
+
+#clearbutton {
+  background-color: aliceblue;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#search form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#search form label {
+  padding: 10px;
+  font-size: larger;
+}
+
+#search form input,
+#search form select {
+  width: 150px; /* Adjust width as needed */
+  margin: 5px;
+}
+
+#search img {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 992px) {
+  #content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #search,
+  #search form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

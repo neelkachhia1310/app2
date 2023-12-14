@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Donation</title>
+    <meta charset="utf-8" />
+    <script
+      src="https://kit.fontawesome.com/7ced19dc59.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="image/favicon.jpg" rel="icon" />
+    <link rel="stylesheet" href="../CSS pages/donation-style.css" />
+    <link rel="stylesheet" href="../CSS pages/header-style.css" />
+    <link rel="stylesheet" href="../CSS pages/footer-style.css" />
+  </head>
+  <body>
+    <header>
+      <section class="headerdesign">
+        <a href="/index.html">
+          <img src="/images/logo.jpg" id="headerlogo" class="logoImage" />
+        </a>
+        <a href="index.html" class="logoText">
+          <h1 class="logoText">College Connect</h1></a
+        >
+      </section>
+    </header>
+
+    <nav id="com_nav">
+      <ul class="com_nav_menu">
+        <li class="com_nav_menu_name">
+          <a href="/index.html">Home</a>
+        </li>
+        <li><a href="../HTML pages/profile.html">Profiles</a></li>
+        <li><a href="../HTML pages/messages.html">Chat</a></li>
+        <li><a href="../HTML pages/events.html">Events</a></li>
+        <li><a href="../HTML pages/Blogs.html">Blogs and Articles</a></li>
+        <li><a href="../HTML pages/Resource.html">Resource</a></li>
+        <li><a href="../HTML pages/carrer-opp.html">Career</a></li>
+        <li>
+          <a href="../HTML pages/searchandfilter.html">Search and Filter</a>
+        </li>
+        <li><a href="../HTML pages/donation.html">Donation</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <aside>
+        <h2>Categories</h2>
+        <ul id="categoryList">
+          <li onclick="filterByCategory('All')">All</li>
+          <li onclick="filterByCategory('Academic')">Academic</li>
+          <li onclick="filterByCategory('Development')">Development</li>
+          <li onclick="filterByCategory('Social')">Social</li>
+        </ul>
+      </aside>
+
+      <div class="wrapper" id="donationContainer">
+        <!-- Donation causes will be dynamically added here -->
+      </div>
+    </main>
+
+    <div id="donationModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeDonationModal()">&times;</span>
+        <h2 id="modalTitle">Donation Details</h2>
+        <div id="modalContent">
+          <!-- Donation details will be dynamically added here -->
+        </div>
+        <div id="donationForm" style="display: none">
+          <h3>Enter Your Donation Details</h3>
+          <form onsubmit="submitDonation(); return false;">
+            <label for="donationAmount">Amount ($):</label>
+            <input type="number" id="donationAmount" required />
+            <button type="submit">Submit Donation</button>
+          </form>
+        </div>
+        <div id="thankYouMessage" style="display: none">
+          <h3>Thank You for Your Donation!</h3>
+          <p>Your support is greatly appreciated.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@collegeconnect.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="quick-links">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 College Connect</p>
+      </div>
+    </footer>
+    <script src="/javascript/header.js"></script>
+    <script src="../javascript/donation.js"></script>
+  </body>
+</html>

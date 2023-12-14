@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blogs</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/font-awesome@5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS pages/blogs-style.css" />
+    <link rel="stylesheet" href="../CSS pages/header-style.css" />
+    <link rel="stylesheet" href="../CSS pages/footer-style.css" />
+  </head>
+  <body>
+    <header>
+      <section class="headerdesign">
+        <a href="index.html">
+          <img src="/images/logo.jpg" id="headerlogo" class="logoImage" />
+        </a>
+        <a href="index.html" class="logoText">
+          <h1 class="logoText">College Connect</h1></a
+        >
+      </section>
+    </header>
+
+    <nav id="com_nav">
+      <ul class="com_nav_menu">
+        <li class="com_nav_menu_name">
+          <a href="/index.html">Home</a>
+        </li>
+        <li><a href="../HTML pages/profile.html">Profiles</a></li>
+        <li><a href="../HTML pages/messages.html">Chat</a></li>
+        <li><a href="../HTML pages/events.html">Events</a></li>
+        <li><a href="../HTML pages/Blogs.html">Blogs and Articles</a></li>
+        <li><a href="../HTML pages/Resource.html">Resource</a></li>
+        <li><a href="../HTML pages/carrer-opp.html">Career</a></li>
+        <li>
+          <a href="../HTML pages/searchandfilter.html">Search and Filter</a>
+        </li>
+        <li><a href="../HTML pages/donation.html">Donation</a></li>
+      </ul>
+    </nav>
+
+    <div class="filter-add-container">
+      <div class="filter-container">
+        <label for="categoryFilter">Filter by Category:</label>
+        <select id="categoryFilter" onchange="filterByCategory()">
+          <option value="all">All Categories</option>
+          <option value="Technology">Technology</option>
+          <option value="Travel">Travel</option>
+          <!-- Add more categories based on your data -->
+        </select>
+      </div>
+
+      <!-- Button to toggle the form -->
+      <button
+        id="toggleFormButton"
+        class="toggle-form-button"
+        onclick="toggleBlogForm()"
+      >
+        Add New Blog Post
+      </button>
+    </div>
+
+    <div id="blogFormModal" class="modal">
+      <div class="modal-content">
+        <!-- Form to submit new blog posts -->
+        <form id="blogForm" class="blog-form">
+          <h2>Create a New Blog Post</h2>
+          <label for="blogTitle">Title:</label>
+          <input type="text" id="blogTitle" required />
+          <label for="blogContent">Content:</label>
+          <textarea id="blogContent" required></textarea>
+          <label for="blogImage">Image URL:</label>
+          <input type="text" id="blogImage" />
+          <label for="blogCategory">Category:</label>
+          <input type="text" id="blogCategory" />
+          <button type="button" onclick="addNewBlogPost()">Submit</button>
+        </form>
+        <span class="close" onclick="closeBlogFormModal()">&times;</span>
+      </div>
+    </div>
+
+    <div class="container" id="blogContainer">
+      <!-- Blog posts will be dynamically added here -->
+    </div>
+
+    <!-- Modal for displaying a full blog post -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage" src="" alt="Blog Image" />
+        <p id="modalContent"></p>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@collegeconnect.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="quick-links">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 College Connect</p>
+      </div>
+    </footer>
+    <script src="/javascript/header.js"></script>
+    <script src="/javascript/Blogs.js"></script>
+  </body>
+</html>

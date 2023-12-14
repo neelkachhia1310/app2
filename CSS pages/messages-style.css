@@ -1,0 +1,206 @@
+/* message page */
+
+#sidebar {
+  /* border-right: 2px solid rgb(167, 167, 167); */
+  /* box-shadow: 0px 0px 7px rgb(70, 69, 69); */
+  box-shadow: 5px 5px 5px 5px rgb(231, 218, 218);
+
+  border-radius: 15px 0px 0px 15px;
+  background: linear-gradient(to left, white, rgba(113, 216, 216, 0.292));
+}
+
+#preview {
+  border-right: 1px solid rgb(245, 227, 227);
+  box-shadow: 5px 5px 5px 5px rgb(231, 218, 218);
+  border-radius: 0px 15px 15px 0px;
+  background: linear-gradient(to right, white, rgba(113, 216, 216, 0.292));
+}
+
+main {
+  display: grid;
+  column-gap: 0px;
+  grid-template-columns: 25% auto;
+  grid-template-rows: 375px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.people {
+  border-bottom: 1px solid rgb(180, 177, 177);
+  box-shadow: 3px 2px 5px 5px rgb(172, 170, 170);
+  border-radius: 5px;
+  margin: 10px;
+  padding: 7px;
+}
+
+.people img {
+  float: left;
+  padding-right: 15px;
+}
+
+.people h3 {
+  margin: 10px;
+}
+
+.sub_message {
+  color: rgba(145, 145, 145, 0.808);
+}
+
+.group {
+  border-bottom: 1px solid rgb(180, 177, 177);
+  box-shadow: 3px 2px 5px 5px rgb(172, 170, 170);
+  border-radius: 5px;
+  margin: 10px;
+  padding: 7px;
+}
+
+.group img {
+  float: left;
+  padding-right: 15px;
+}
+
+.group h3 {
+  margin: 10px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#total_chats {
+  overflow-y: auto; /* Added overflow-y to make it scrollable */
+  max-height: 310px;
+}
+
+#chat_style {
+  text-align: center;
+  background-color: rgba(113, 216, 216, 0.477);
+  border-radius: 15px 0px 0px 0px;
+}
+
+#chat_style p {
+  padding: 16px;
+  margin: 0px 0px;
+}
+
+#hearder_of_people {
+  background-color: rgba(113, 216, 216, 0.477);
+  display: grid;
+  column-gap: 15px;
+  grid-template-columns: 15px auto;
+  border-radius: 0px 15px 0px 0px;
+}
+
+#hearder_of_people img {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#hearder_of_people p {
+  padding-left: 15px;
+}
+
+/* #preview p {
+  width: 150px;
+  background-color: rgba(139, 140, 139, 0.377);
+  border: 1px solid rgb(180, 177, 177);
+  border-radius: 5px;
+} */
+
+#conversation {
+  padding: 15px;
+  display: flex;
+  height: 250px;
+  flex-direction: column;
+  overflow-y: auto; /* Added overflow-y to make it scrollable */
+  max-height: 250px; /* Added max-height to limit the height and enable scrolling */
+}
+
+.my_message div {
+  padding: 2px;
+  /* background-color: rgba(139, 140, 139, 0.377); */
+  width: auto;
+  /* border: 1px solid rgb(180, 177, 177);
+  border-radius: 5px; */
+  display: flex;
+  justify-content: end;
+}
+
+.my_message p {
+  padding: 5px;
+  margin-top: 0%;
+  background-color: rgba(139, 140, 139, 0.377);
+  width: 200px;
+  border: 1px solid rgb(180, 177, 177);
+  border-radius: 10px 10px 0px 10px;
+  display: flex;
+  justify-content: end;
+}
+/* #conversation .my_reply {
+  display: flex;
+  justify-content: end;
+} */
+
+.my_reply div {
+  /* padding: 5px; */
+  /* background-color: antiquewhite; */
+  width: auto;
+  /* border: 1px solid rgb(180, 177, 177);
+  border-radius: 5px 5px 5px; */
+}
+
+.my_reply p {
+  padding: 5px;
+  margin-top: 0%;
+  background-color: rgba(220, 220, 137, 0.377);
+  width: 200px;
+  border: 1px solid rgb(180, 180, 177);
+  border-radius: 10px 10px 10px 0px;
+}
+
+.my_reply {
+  display: grid;
+  grid-area: 1 / col4-start / last-line / 6;
+}
+
+/* #send_img {
+  padding-top: 10px;
+  padding-left: 5px;
+} */
+
+#type_message input {
+  background-color: aliceblue;
+  border: 1px solid rgb(180, 177, 177);
+  border-radius: 10px;
+  display: flex;
+}
+/* 
+.chat {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.chat_img {
+  align-self: flex-end; /
+  margin-bottom: 10px; 
+  margin-right: 10px;
+} */
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15px;
+  margin-right: 15px;
+  /* border: 1px solid rgb(230, 227, 227); */
+  /* border-radius: 15px 15px; */
+}
+
+.comment input {
+  background-color: rgb(213, 231, 235);
+  border-radius: 7px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 0px solid rgba(0, 0, 0, 0);
+  width: 825px;
+}

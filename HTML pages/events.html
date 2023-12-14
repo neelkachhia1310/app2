@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico" />
+    <script
+      src="https://kit.fontawesome.com/7ced19dc59.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../CSS pages/header-style.css" />
+    <link rel="stylesheet" href="../CSS pages/footer-style.css" />
+    <link rel="stylesheet" href="/CSS pages/events-style.css" />
+  </head>
+  <body>
+    <div id="Wrapper">
+      <header>
+        <section class="headerdesign">
+          <a href="../index.html">
+            <img src="/images/logo.jpg" id="headerlogo" class="logoImage" />
+          </a>
+          <a href="index.html" class="logoText">
+            <h1 class="logoText">College Connect</h1></a
+          >
+        </section>
+      </header>
+
+      <nav id="com_nav">
+        <ul class="com_nav_menu">
+          <li class="com_nav_menu_name">
+            <a href="/index.html">Home</a>
+          </li>
+          <li><a href="../HTML pages/profile.html">Profiles</a></li>
+          <li><a href="../HTML pages/messages.html">Chat</a></li>
+          <li><a href="../HTML pages/events.html">Events</a></li>
+          <li><a href="../HTML pages/Blogs.html">Blogs and Articles</a></li>
+          <li><a href="../HTML pages/Resource.html">Resource</a></li>
+          <li><a href="../HTML pages/carrer-opp.html">Career</a></li>
+          <li>
+            <a href="../HTML pages/searchandfilter.html">Search and Filter</a>
+          </li>
+          <li><a href="../HTML pages/donation.html">Donation</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section class="events">
+          <section class="eventinfo">
+            <h3 class="eventinfoheading" onclick="openPopup()">
+              Academic Events
+            </h3>
+            <p class="eventdata">
+              Qualified academics, professionals, and specialists are frequently
+              invited by universities to give lectures or take part in speaker
+              series. Researchers and students come together to present and
+              discuss their work in academic conferences and symposia.
+            </p>
+            <div class="sysmbols">
+              <button
+                id="thumsup1"
+                class="like-btn"
+                onclick="toggleLikeDislike('thumsup1')"
+              >
+                <i id="likeIcon1" class="fa-regular fa-thumbs-up"></i>
+                <i
+                  id="likedIcon1"
+                  class="fa-solid fa-thumbs-up"
+                  style="display: none"
+                ></i>
+                <span id="likeCount1" class="like-count">
+                  <!-- You can set some random count here -->5</span
+                >
+              </button>
+              <button
+                id="thumbsdown1"
+                class="dislike-btn"
+                onclick="toggleLikeDislike('thumsup1')"
+              >
+                <i id="dislikeIcon1" class="fa-regular fa-thumbs-down"></i>
+                <i
+                  id="dislikedIcon1"
+                  class="fa-solid fa-thumbs-down"
+                  style="display: none"
+                ></i>
+                <span id="dislikeCount1" class="dislike-count">
+                  <!-- You can set some random count here -->2</span
+                >
+              </button>
+            </div>
+          </section>
+          <section class="eventinfo">
+            <h3 class="eventinfoheading">Cultural and Arts Events</h3>
+            <p class="eventdata">
+              Universities may host theatrical shows, dance performances,
+              musical concerts, and other forms of the arts. showcasing the
+              creations of the staff, the students, or outside artists. varied
+              cultures are honored through food, entertainment, and exhibits.
+            </p>
+            <div class="sysmbols">
+              <i
+                id="thumsup2"
+                class="fa-regular fa-thumbs-up thumpsUpPosition"
+                onclick="toggleLikeDislike('thumsup2')"
+              ></i>
+              <i
+                id="thumbsdown2"
+                class="fa-regular fa-thumbs-down thumpsDownPosition"
+                style="display: none"
+                onclick="toggleLikeDislike('thumsup2')"
+              ></i>
+              <i class="fa-regular fa-bookmark fa-lg bookmarklocation"></i>
+            </div>
+          </section>
+          <section class="eventinfo">
+            <h3 class="eventinfoheading">Sports Events</h3>
+            <p class="eventdata">
+              Rivalries between many collegiate sports teams. Student-led
+              leagues and competitions in recreational sports. activities,
+              lectures, and workshops promoting wellness and health.
+            </p>
+            <div class="sysmbols">
+              <i
+                id="thumsup3"
+                class="fa-regular fa-thumbs-up thumpsUpPosition"
+                onclick="toggleLikeDislike('thumsup3')"
+              ></i>
+              <i
+                id="thumbsdown3"
+                class="fa-regular fa-thumbs-down thumpsDownPosition"
+                style="display: none"
+                onclick="toggleLikeDislike('thumsup3')"
+              ></i>
+              <i class="fa-regular fa-bookmark fa-lg bookmarklocation"></i>
+            </div>
+          </section>
+          <section class="eventinfo">
+            <h3 class="eventinfoheading">Social and Networking Events</h3>
+            <p class="eventdata">
+              Students have the chance to interact with alumni, professionals,
+              and other students. events designed to promote social interaction
+              and a sense of community. platforms for connecting with possible
+              employers and researching work prospects.
+            </p>
+            <div class="sysmbols">
+              <i
+                id="thumsup4"
+                class="fa-regular fa-thumbs-up thumpsUpPosition"
+                onclick="toggleLikeDislike('thumsup4')"
+              ></i>
+              <i
+                id="thumbsdown4"
+                class="fa-regular fa-thumbs-down thumpsDownPosition"
+                style="display: none"
+                onclick="toggleLikeDislike('thumsup4')"
+              ></i>
+              <i class="fa-regular fa-bookmark fa-lg bookmarklocation"></i>
+            </div>
+          </section>
+          <section class="eventinfo">
+            <h3 class="eventinfoheading">Educational Workshops and Training</h3>
+            <p class="eventdata">
+              Sessions to improve practical abilities like project management,
+              public speaking, or coding. workshops on teamwork, leadership, and
+              personal growth.
+            </p>
+            <div class="sysmbols">
+              <i
+                id="thumsup5"
+                class="fa-regular fa-thumbs-up thumpsUpPosition"
+                onclick="toggleLikeDislike('thumsup5')"
+              ></i>
+              <i
+                id="thumbsdown5"
+                class="fa-regular fa-thumbs-down thumpsDownPosition"
+                style="display: none"
+                onclick="toggleLikeDislike('thumsup5')"
+              ></i>
+              <i class="fa-regular fa-bookmark fa-lg bookmarklocation"></i>
+            </div>
+          </section>
+          <section class="eventinfo">
+            <h3 class="eventinfoheading">Celebrations</h3>
+            <p class="eventdata">
+              There will be celebrations for graduates of degree programs.
+              milestone occasions recognizing the founding of the institution or
+              certain departments.
+            </p>
+            <div class="sysmbols">
+              <i
+                id="thumsup6"
+                class="fa-regular fa-thumbs-up thumpsUpPosition"
+                onclick="toggleLikeDislike('thumsup6')"
+              ></i>
+              <i
+                id="thumbsdown6"
+                class="fa-regular fa-thumbs-down thumpsDownPosition"
+                style="display: none"
+                onclick="toggleLikeDislike('thumsup6')"
+              ></i>
+              <i class="fa-regular fa-bookmark fa-lg bookmarklocation"></i>
+            </div>
+          </section>
+        </section>
+        <div id="popupContainer" class="popup-container">
+          <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <h2 id="popupHeading">Popup Content</h2>
+            <img id="popupImage" src="" alt="Event Image" class="popup-image" />
+            <p id="popupText">
+              This is the information you want to display in the popup.
+            </p>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: info@collegeconnect.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+          </div>
+          <div class="footer-section">
+            <h3>Follow Us</h3>
+            <ul class="social-icons">
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="quick-links">
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 College Connect</p>
+        </div>
+      </footer>
+    </div>
+    <script src="/javascript/header.js"></script>
+    <script src="/javascript/events.js"></script>
+  </body>
+</html>

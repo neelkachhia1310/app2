@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+body {
+  background-color: aliceblue;
+}
+.events {
+  min-width: 200px;
+  max-width: 1200px;
+  margin: 2% auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.eventinfo {
+  border: 2px solid black;
+  min-width: 100px;
+  max-width: 500px;
+  font-family: "Open Sans", sans-serif, Arial;
+  padding: 1em;
+  flex-wrap: wrap;
+  background-image: linear-gradient(180deg, rgba(118, 177, 241, 0.845), white);
+}
+
+.eventinfoheading {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0;
+  font-size: 2 em;
+  color: #f8170be3;
+  cursor: pointer;
+}
+
+.eventinfoheading:hover {
+  color: black;
+}
+
+.eventdata {
+  margin-bottom: 0px;
+}
+
+.bookmarklocation {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#popupContainer {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.popup-content {
+  padding: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+}
+
+.popup-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#popupHeading {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+#popupText {
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #555;
+}
+
+#popupContainer {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.like-btn,
+.dislike-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.like-btn i,
+.dislike-btn i {
+  margin-right: 5px;
+}
+
+.like-count,
+.dislike-count {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.fa-solid {
+  display: none; /* Hide solid thumbs-up and thumbs-down icons by default */
+}
+
+/* Style for solid icons when active */
+.like-btn.active i.fa-solid,
+.dislike-btn.active i.fa-solid {
+  display: inline-block;
+}

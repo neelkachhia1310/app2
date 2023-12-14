@@ -1,0 +1,246 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 70%; /* Adjust width as needed */
+}
+
+.donation-cause {
+    width: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.donation-cause:hover {
+    transform: scale(1.05);
+}
+
+.cause-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.cause-info img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.donate-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.share-icon {
+    margin-top: 10px;
+    color: #333;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    .donation-cause {
+        width: calc(100% - 20px);
+    }
+}
+
+/* Additional styles for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Your existing CSS remains unchanged */
+
+/* Add the following styles to the end of your existing CSS file */
+#categoryList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+#categoryList li {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#categoryList li:hover {
+    background-color: #e0e0e0;
+}
+
+/* Your existing styles remain unchanged */
+
+/* Additional styles for the progress bar */
+.progress-bar {
+    height: 10px;
+    background-color: #4CAF50;
+    width: 0;
+    transition: width 0.5s;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Adjust margin for vertical positioning */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+    overflow: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Styling for the donation form */
+#donationForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+#donationForm label {
+    margin-bottom: 5px;
+}
+
+#donationForm input {
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+#donationForm button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#donationForm button:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the thank you message */
+#thankYouMessage {
+    text-align: center;
+    padding: 20px;
+    background-color: #dff0d8;
+    border: 1px solid #d0e9c6;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Styling for the recent donors section */
+#recentDonors {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#recentDonors li {
+    margin-bottom: 5px;
+}
+
+/* ... (rest of the CSS code remains unchanged) ... */

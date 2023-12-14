@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Resource Exchange</title>
+    <meta charset="utf-8" />
+    <script
+      src="https://kit.fontawesome.com/7ced19dc59.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link href="image/favicon.jpg" rel="icon" />
+    <link rel="stylesheet" href="../CSS pages/resource-style.css" />
+    <link rel="stylesheet" href="../CSS pages/header-style.css" />
+    <link rel="stylesheet" href="../CSS pages/footer-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <section class="headerdesign">
+        <a href="/index.html">
+          <img src="../images/logo.jpg" id="headerlogo" class="logoImage" />
+        </a>
+        <a href="/index.html" class="logoText">
+          <h1 class="logoText">College Connect</h1></a
+        >
+      </section>
+    </header>
+
+    <nav id="com_nav">
+      <ul class="com_nav_menu">
+        <li class="com_nav_menu_name">
+          <a href="/index.html">Home</a>
+        </li>
+        <li><a href="../HTML pages/profile.html">Profiles</a></li>
+        <li><a href="../HTML pages/messages.html">Chat</a></li>
+        <li><a href="../HTML pages/events.html">Events</a></li>
+        <li><a href="../HTML pages/Blogs.html">Blogs and Articles</a></li>
+        <li><a href="../HTML pages/Resource.html">Resource</a></li>
+        <li><a href="../HTML pages/carrer-opp.html">Career</a></li>
+        <li>
+          <a href="../HTML pages/searchandfilter.html">Search and Filter</a>
+        </li>
+        <li><a href="../HTML pages/donation.html">Donation</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div>
+        <div class="section1">
+          <h3>Recent</h3>
+          <ul>
+            <li><a href="">The spark foundation Network</a></li>
+            <li><a href="">International Conference</a></li>
+            <li><a href="">Flutter</a></li>
+            <li><a href="">Engineerning</a></li>
+          </ul>
+
+          <h3>Group</h3>
+          <ul>
+            <li><a href="">The spark foundation Network</a></li>
+            <li><a href="">Internship</a></li>
+            <li><a href="">Part-time openings</a></li>
+            <li><a href="">Important Resource</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div id="post_here"></div>
+        <div class="section2">
+          <div>
+            <div class="post_image">
+              <img src="../images/man.png" />
+              <p>jemis Goti</p>
+            </div>
+            <p class="profile">
+              Software Developer @ Your Service( Dart | Flutter | IOT | AI |
+              Python ) <br />
+              2d • 🌎
+            </p>
+          </div>
+          <p>
+            Check out
+            <a href="https://earth.google.com">https://earth.google.com</a> if
+            you're ever told that #flutter isn't the right choice for your next
+            application. The platform's true potential is showcased in every
+            aspect on <a href="">#Google #earth.</a>
+          </p>
+          <p>👍15 ❤️4 Krushil, Neel and others..</p>
+          <!-- use java script here -->
+
+          <div class="comment">
+            <input
+              type="text"
+              id="post_comment_1"
+              placeholder="add your comment.."
+            />
+            <img
+              src="../images/send.png"
+              height="30px"
+              onclick="addcomment(1)"
+            />
+          </div>
+          <div id="comment_here_1"></div>
+          <!-- create form here -->
+        </div>
+        <div class="section2">
+          <div>
+            <div class="post_image">
+              <img src="../images/Girl.png" />
+              <p>marina lyor</p>
+            </div>
+            <p class="profile">
+              Software Developer <br />
+              5d • 🧑‍💻
+            </p>
+          </div>
+          <p>
+            Join a high-growth environment and build something that will have a
+            huge impact on the world.
+          </p>
+          <img
+            src="../images/hiring.jpeg"
+            alt="hiring image"
+            height="500px"
+            width="500px"
+          />
+          <p>👍20 ❤️1 john, jensie and others..</p>
+          <!-- here -->
+          <div class="comment">
+            <input
+              type="text"
+              id="post_comment_2"
+              placeholder="add your comment.."
+            />
+            <img
+              src="../images/send.png"
+              height="30px"
+              onclick="addcomment(2)"
+            />
+          </div>
+          <div id="comment_here_2"></div>
+        </div>
+        <div class="section2">
+          <div>
+            <div class="post_image">
+              <img src="../images/Girl.png" />
+              <p>Jensie shah</p>
+            </div>
+            <p class="profile">
+              Web Augmented Reality @ 8th Wall | Niantic <br />
+              1d • ⭐
+            </p>
+          </div>
+          <p>This is really helpful video for HTML</p>
+          <iframe
+            width="500px"
+            height="280px"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY"
+          >
+          </iframe>
+          <p>👍9 👎4 Ananya, sid and others..</p>
+          <!-- here -->
+          <div class="comment">
+            <input
+              type="text"
+              id="post_comment_3"
+              placeholder="add your comment.."
+            />
+            <img
+              src="../images/send.png"
+              height="30px"
+              onclick="addcomment(3)"
+            />
+          </div>
+          <div id="comment_here_3"></div>
+        </div>
+        <div class="section2">
+          <div>
+            <div class="post_image">
+              <img src="../images/Girl.png" />
+              <p>Jensie shah</p>
+            </div>
+            <p class="profile">
+              Automation and Robotics Engineer (Entrepreneur, Mentor,
+              Academician)<br />
+              4d • 🌎
+            </p>
+          </div>
+          <p>
+            Even after 4yrs of locomotion research, we keep getting surprised by
+            how far one can push the limits of legged robots! We report the next
+            major update today in our locomotion series: 🚀🤖
+            <a href="../images/LabExercise01.pdf">Click here!</a>.
+          </p>
+
+          <p>👍28 🙏4 Darshil, shafiq and others..</p>
+          <!-- here -->
+          <div class="comment">
+            <input
+              type="text"
+              id="post_comment_4"
+              placeholder="add your comment.."
+            />
+            <img
+              src="../images/send.png"
+              height="30px"
+              onclick="addcomment(4)"
+            />
+          </div>
+          <div id="comment_here_4"></div>
+        </div>
+      </div>
+      <div>
+        <div class="section3">
+          <div>
+            <!-- use js & form here  -->
+            <form name="post" action="" method="get" class="post">
+              <h3>Write your post here!</h3>
+              <input
+                type="text"
+                id="post_text"
+                placeholder="Write your LinkedIn post here..."
+              />
+            </form>
+            <span id="error_message"></span>
+            <div class="post_button_container">
+              <button id="post_button" onclick="addTask()">Post</button>
+            </div>
+            <ul id="post_section">
+              <li>📰 Media</li>
+              <li>🗓️ Event</li>
+              <li>📝 Write article</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@collegeconnect.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="quick-links">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 College Connect</p>
+      </div>
+    </footer>
+    <script src="/javascript/header.js"></script>
+    <script src="../javascript/resource.js"></script>
+  </body>
+</html>
