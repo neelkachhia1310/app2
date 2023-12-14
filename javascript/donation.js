@@ -34,13 +34,33 @@ function closeDonationModal() {
 var donationData = [
     {
         name: "Scholarship Fund",
-        image: "https://example.com/scholarship.jpg",
+        image: "https://img.freepik.com/free-vector/illustration-charity-support_53876-9189.jpg?t=st=1702573119~exp=1702573719~hmac=eb521de84fe2ab076d449c51403324377fb54baca5c598024213450256d85410",
+        amountRaised: 5000,
+        donors: 100,
+        category: "Academic",
+        description: "Support students in pursuing higher education by contributing to our Scholarship Fund.",
+        progress: 10,
+        target: 10000
+    },
+    {
+        name: "Sports Scholarship",
+        image: "https://img.freepik.com/free-vector/illustration-charity-support_53876-9189.jpg?t=st=1702573119~exp=1702573719~hmac=eb521de84fe2ab076d449c51403324377fb54baca5c598024213450256d85410",
         amountRaised: 5000,
         donors: 100,
         category: "Academic",
         description: "Support students in pursuing higher education by contributing to our Scholarship Fund.",
         progress: 60,
-        target: 10000
+        target: 20000
+    },
+    {
+        name: "Academic Scholarship",
+        image: "https://img.freepik.com/free-vector/illustration-charity-support_53876-9189.jpg?t=st=1702573119~exp=1702573719~hmac=eb521de84fe2ab076d449c51403324377fb54baca5c598024213450256d85410",
+        amountRaised: 5000,
+        donors: 100,
+        category: "Academic",
+        description: "Support students in pursuing higher education by contributing to our Scholarship Fund.",
+        progress: 80,
+        target: 30000
     },
 ];
 
@@ -58,13 +78,13 @@ function loadDonationCauses(data) {
         donationCause.setAttribute("data-category", cause.category);
 
         donationCause.innerHTML = `
+            <img src="${cause.image}" alt="${cause.name}">
             <div class="cause-info">
-                <img src="${cause.image}" alt="${cause.name}" height="100px" width="100px">
                 <h3>${cause.name}</h3>
+                <p>${cause.description}</p>
                 <p>Amount Raised: $${cause.amountRaised}</p>
                 <p>Donors: ${cause.donors}</p>
                 <p>Category: ${cause.category}</p>
-                <p>Description: ${cause.description}</p>
                 <div class="progress-bar" style="width: ${cause.progress}%;"></div>
                 <p>Progress: ${cause.progress}% of $${cause.target} goal</p>
             </div>
@@ -168,12 +188,12 @@ function createDonationCause() {
     var causeName = document.getElementById('causeName').value;
     var causeDescription = document.getElementById('causeDescription').value;
     var causeTarget = document.getElementById('causeTarget').value;
+    var causeCategory = document.getElementById('causeCategory').value;
 
-    if (!causeName || !causeDescription || !causeTarget) {
+    if (!causeName || !causeDescription || !causeTarget || !causeCategory) {
         alert('Please fill in all the fields.');
         return;
     }
-
 
     var newCause = {
         name: causeName,
@@ -181,18 +201,13 @@ function createDonationCause() {
         target: parseFloat(causeTarget),
         amountRaised: 0,
         donors: 0,
-        category: "Custom",
-        image: "https://example.com/placeholder-image.jpg", // You can use a placeholder image
-        progress: 0 // Initialize progress to 0
+        category: causeCategory,
+        image: "https://img.freepik.com/free-vector/illustration-charity-support_53876-9189.jpg?t=st=1702573119~exp=1702573719~hmac=eb521de84fe2ab076d449c51403324377fb54baca5c598024213450256d85410",
+        progress: 0
     };
 
-    // Push the new cause to the donationData array
     donationData.push(newCause);
-
-    // Reload donation causes to include the new one
     loadDonationCauses(donationData);
-
-    // Close the create donation modal
     closeCreateDonationModal();
 }
 

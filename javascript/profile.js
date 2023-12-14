@@ -2,7 +2,6 @@ function editProfile(field) {
   const currentValueElement = document.getElementById(field);
   const currentValue = currentValueElement.childNodes[0].nodeValue.trim();
 
-  // Check if an edit form is already present
   const existingForm = currentValueElement.querySelector('.edit-form');
   
   if (existingForm) {
@@ -41,10 +40,6 @@ function editProfile(field) {
   }
 }
 
-
-
-
-
 function addToList(listId, promptMessage) {
   const newListValue = prompt(promptMessage);
   if (newListValue !== null && newListValue.trim() !== "") {
@@ -65,7 +60,6 @@ function addTestimonial() {
   }
 }
 
-// Light/Dark Mode Toggle
 const body = document.body;
 
 function toggleDarkMode() {

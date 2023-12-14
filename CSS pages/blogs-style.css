@@ -148,6 +148,33 @@ body {
     font-weight: bold;
 }
 
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+#modalImage {
+    width: 50%;
+    height: 50%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
 .blog-post a:hover {
     text-decoration: underline;
 }
@@ -195,8 +222,6 @@ body {
     font-size: 16px;
     margin: 10px 0;
 }
-
-/* Media queries for responsiveness */
 
 @media (max-width: 992px) {
     .container {
