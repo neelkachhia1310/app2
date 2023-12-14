@@ -10,7 +10,7 @@ menuItems.forEach(function (item) {
     } else {
       item.classList.add("active");
     }
-    if (pageName == currentPage) {
+    if (currentPage == "/") {
       item.classList.add("active");
     }
   }
