@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (Notification.permission !== "granted") {
     Notification.requestPermission().then(function (permission) {
       if (permission === "granted") {
-        // showNotification("Welcome!", "Thank you for granting permission.");
         let notification = new Notification(
           "Welcome to events of Career Connect",
           {
@@ -22,9 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
         );
       } else {
         console.log("Permission denied for notifications");
-        // alert(
-        //   "Please allow notifications for this site. You can manage your settings in your browser."
-        // );
       }
     });
   } else {
@@ -37,70 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
   changeLikeDislike(4);
   changeLikeDislike(5);
   changeLikeDislike(6);
-  // const likeButton = document.getElementById("thumsup");
-  // const dislikeButton = document.getElementById("thumbsdown");
-  // const likeIcon = document.getElementById("likeIcon");
-  // const dislikeIcon = document.getElementById("dislikeIcon");
-  // const likedIcon = document.getElementById("likedIcon");
-  // const dislikedIcon = document.getElementById("dislikedIcon");
-  // const likeCount = document.getElementById("likeCount");
-  // const dislikeCount = document.getElementById("dislikeCount");
-
-  // // Set initial state
-  // let initialLikeCount = Math.floor(Math.random() * 100);
-  // let initialDislikeCount = Math.floor(Math.random() * 100);
-
-  // likeCount.textContent = initialLikeCount;
-  // dislikeCount.textContent = initialDislikeCount;
-  // likeIcon.style.display = "inline-block";
-  // dislikeIcon.style.display = "inline-block";
-  // // Event listeners for like and dislike buttons
-  // likeButton.addEventListener("click", function () {
-  //   if (
-  //     likeIcon.style.display === "inline-block" &&
-  //     dislikeIcon.style.display === "inline-block"
-  //   ) {
-  //     likedIcon.style.display = "inline-block";
-  //     likeIcon.style.display = "none";
-  //     likeCount.textContent = initialLikeCount + 1;
-  //   } else if (likedIcon.style.display === "inline-block") {
-  //     likedIcon.style.display = "none";
-  //     likeIcon.style.display = "inline-block";
-  //     likeCount.textContent = initialLikeCount;
-  //   } else {
-  //     likedIcon.style.display = "inline-block";
-  //     likeIcon.style.display = "none";
-  //     likeCount.textContent = initialLikeCount + 1;
-  //     dislikedIcon.style.display = "none";
-  //     dislikeIcon.style.display = "inline-block";
-  //     dislikeCount.textContent = initialDislikeCount;
-  //   }
-  // });
-  // dislikeButton.addEventListener("click", function () {
-  //   if (
-  //     likeIcon.style.display === "inline-block" &&
-  //     dislikeIcon.style.display === "inline-block"
-  //   ) {
-  //     dislikedIcon.style.display = "inline-block";
-  //     dislikeIcon.style.display = "none";
-  //     dislikeCount.textContent = initialDislikeCount + 1;
-  //   } else if (dislikedIcon.style.display === "inline-block") {
-  //     dislikedIcon.style.display = "none";
-  //     dislikeIcon.style.display = "inline-block";
-  //     dislikeCount.textContent = initialDislikeCount;
-  //   } else {
-  //     likedIcon.style.display = "none";
-  //     likeIcon.style.display = "inline-block";
-  //     likeCount.textContent = initialLikeCount;
-  //     dislikedIcon.style.display = "inline-block";
-  //     dislikeIcon.style.display = "none";
-  //     dislikeCount.textContent = initialDislikeCount + 1;
-  //   }
-  // });
 
   const hackathonDate = new Date("2023-12-17T00:00:00");
 
-  // Function to update the countdown
   function updateCountdown() {
     const now = new Date();
     const timeDifference = hackathonDate - now;
@@ -120,30 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("customSeconds").innerText = seconds;
   }
 
-  // Update the countdown every second
   setInterval(updateCountdown, 1000);
 
-  // Initial update
   updateCountdown();
 });
 
-// let notification, interval;
-// document.addEventListener("visibilitychange", () => {
-//   if (document.visibilityState === "hidden") {
-//     let leaveDate = new Date();
-//     interval = setInterval(() => {
-//       notification = new Notification("Come back please!!!", {
-//         body: `You have been away since last ${Math.round(
-//           (new Date() - leaveDate) / 1000
-//         )} seconds.`,
-//         tag: "Come back",
-//       });
-//     }, 5000);
-//   } else {
-//     if (interval) clearInterval(interval);
-//     if (notification) notification.close();
-//   }
-// });
 function changeLikeDislike(EventId) {
   const likeButton = document.getElementById("thumsup" + EventId);
   const dislikeButton = document.getElementById("thumbsdown" + EventId);
@@ -154,7 +70,6 @@ function changeLikeDislike(EventId) {
   const likeCount = document.getElementById("likeCount" + EventId);
   const dislikeCount = document.getElementById("dislikeCount" + EventId);
 
-  // Set initial state
   let initialLikeCount = Math.floor(Math.random() * 100);
   let initialDislikeCount = Math.floor(Math.random() * 100);
 
@@ -162,7 +77,7 @@ function changeLikeDislike(EventId) {
   dislikeCount.textContent = initialDislikeCount;
   likeIcon.style.display = "inline-block";
   dislikeIcon.style.display = "inline-block";
-  // Event listeners for like and dislike buttons
+
   likeButton.addEventListener("click", function () {
     if (
       likeIcon.style.display === "inline-block" &&
