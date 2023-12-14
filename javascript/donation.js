@@ -1,16 +1,27 @@
-function openDonationModal(name, description, target, amountRaised) {
+function openDonationModal(name, description, target, amountRaised, image) {
     var modal = document.getElementById('donationModal');
     var modalTitle = document.getElementById('modalTitle');
     var modalContent = document.getElementById('modalContent');
+    var donationForm = document.getElementById('donationForm');
+    var thankYouMessage = document.getElementById('thankYouMessage');
 
     modalTitle.innerText = name + ' Details';
 
     modalContent.innerHTML = `
+        <img src="${image}" alt="${name}" style="max-width: 100%; height: auto; border-radius: 8px;">
         <p>${description}</p>
         <p>Target: $${target}</p>
         <p>Amount Raised: $${amountRaised}</p>
-        <!-- Add more donation details here -->
+        <div class="progress-bar" style="width: ${calculateProgress(amountRaised, target)}%;"></div>
+        <p>Progress: ${calculateProgress(amountRaised, target)}% of $${target} goal</p>
+        <h3>Recent Donors</h3>
+        <ul id="recentDonors"></ul>
     `;
+
+    displayRecentDonors();
+
+    donationForm.style.display = 'block';
+    thankYouMessage.style.display = 'none';
 
     modal.style.display = 'block';
 }
@@ -28,10 +39,9 @@ var donationData = [
         donors: 100,
         category: "Academic",
         description: "Support students in pursuing higher education by contributing to our Scholarship Fund.",
-        progress: 60, // Percentage of the fundraising goal achieved
-        target: 10000 // Fundraising goal
+        progress: 60,
+        target: 10000
     },
-    // Add more causes as needed
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -59,7 +69,7 @@ function loadDonationCauses(data) {
                 <p>Progress: ${cause.progress}% of $${cause.target} goal</p>
             </div>
             <div class="donate-btn">
-                <button onclick="openDonationModal('${cause.name}', '${cause.description}', ${cause.target}, ${cause.amountRaised})">Donate Now</button>
+                <button onclick="openDonationModal('${cause.name}', '${cause.description}', ${cause.target}, ${cause.amountRaised}, '${cause.image}')">Donate Now</button>
                 <span class="share-icon" onclick="shareCause('${cause.name}')">Share</span>
             </div>
         `;
@@ -81,11 +91,9 @@ function filterByCategory(category) {
 }
 
 function shareCause(causeName) {
-    // Add logic to share the specific cause
+
     alert("Sharing cause: " + causeName);
 }
-
-// ... (previous JavaScript code remains unchanged) ...
 
 function openDonationModal(name, description, target, amountRaised) {
     var modal = document.getElementById('donationModal');
@@ -106,7 +114,6 @@ function openDonationModal(name, description, target, amountRaised) {
         <ul id="recentDonors"></ul>
     `;
 
-    // Fetch and display recent donors
     displayRecentDonors();
 
     donationForm.style.display = 'block';
@@ -118,10 +125,6 @@ function openDonationModal(name, description, target, amountRaised) {
 function submitDonation() {
     var donationAmount = document.getElementById('donationAmount').value;
 
-    // Assume you have a server-side endpoint for handling donations
-    // Send the donationAmount to the server and handle the response accordingly
-
-    // For demonstration purposes, let's show a thank you message on the client side
     showThankYouMessage();
 }
 
@@ -134,8 +137,7 @@ function showThankYouMessage() {
 }
 
 function displayRecentDonors() {
-    // Assume you have a server-side endpoint to fetch recent donors
-    // For demonstration purposes, let's use sample data
+
     var recentDonors = ['John Doe', 'Jane Smith', 'Sam Wilson'];
 
     var recentDonorsList = document.getElementById('recentDonors');
@@ -148,10 +150,50 @@ function displayRecentDonors() {
     });
 }
 
-// Function to calculate the fundraising progress percentage
 function calculateProgress(amountRaised, target) {
     return (amountRaised / target) * 100;
 }
 
-// ... (rest of the JavaScript code remains unchanged) ...
+function openCreateDonationForm() {
+    var createDonationModal = document.getElementById('createDonationModal');
+    createDonationModal.style.display = 'block';
+}
+
+function closeCreateDonationModal() {
+    var createDonationModal = document.getElementById('createDonationModal');
+    createDonationModal.style.display = 'none';
+}
+
+function createDonationCause() {
+    var causeName = document.getElementById('causeName').value;
+    var causeDescription = document.getElementById('causeDescription').value;
+    var causeTarget = document.getElementById('causeTarget').value;
+
+    if (!causeName || !causeDescription || !causeTarget) {
+        alert('Please fill in all the fields.');
+        return;
+    }
+
+
+    var newCause = {
+        name: causeName,
+        description: causeDescription,
+        target: parseFloat(causeTarget),
+        amountRaised: 0,
+        donors: 0,
+        category: "Custom",
+        image: "https://example.com/placeholder-image.jpg", // You can use a placeholder image
+        progress: 0 // Initialize progress to 0
+    };
+
+    // Push the new cause to the donationData array
+    donationData.push(newCause);
+
+    // Reload donation causes to include the new one
+    loadDonationCauses(donationData);
+
+    // Close the create donation modal
+    closeCreateDonationModal();
+}
+
 
