@@ -85,21 +85,21 @@
 
     <div id="createDonationModal" class="modal">
       <div class="modal-content">
-          <span class="close" onclick="closeCreateDonationModal()">&times;</span>
-          <h2>Create New Donation Cause</h2>
-          <div id="createDonationForm">
-            <form onsubmit="createDonationCause(); return false;">
-              <label for="causeName">Cause Name:</label>
-              <input type="text" id="causeName" required />
-              <label for="causeDescription">Cause Description:</label>
-              <textarea id="causeDescription" required></textarea>
-              <label for="causeImage">Image Link:</label>
-              <input type="url" id="causeImage" placeholder="Enter image URL" required />
-              <label for="causeTarget">Fundraising Goal ($):</label>
-              <input type="number" id="causeTarget" required />
-              <label for="causeCategory">Category:</label>
-              <input type="text" id="causeCategory" required />
-              <button type="submit">Create Donation Cause</button>
+        <span class="close" onclick="closeCreateDonationModal()">&times;</span>
+        <h2>Create New Donation Cause</h2>
+        <div id="createDonationForm">
+          <form onsubmit="createDonationCause(); return false;">
+            <label for="causeName">Cause Name:</label>
+            <input type="text" id="causeName" required />
+            <label for="causeDescription">Cause Description:</label>
+            <textarea id="causeDescription" required></textarea>
+            <!-- <label for="causeImage">Image Link:</label>
+              <input type="url" id="causeImage" placeholder="Enter image URL" required /> -->
+            <label for="causeTarget">Fundraising Goal ($):</label>
+            <input type="number" id="causeTarget" required />
+            <label for="causeCategory">Category:</label>
+            <input type="text" id="causeCategory" required />
+            <button type="submit">Create Donation Cause</button>
           </form>
         </div>
       </div>
