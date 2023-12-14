@@ -249,14 +249,104 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* Media query for responsive design */
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .custom-countdown-item {
-    margin: 10px 0; /* Adjust margin for smaller screens */
+    margin: 10px 0;
   }
-}
+} */
 
 /* Optional: Add hover effect to the entire section */
 .custom-event:hover {
   transform: scale(1.02); /* Scale the section on hover for a subtle effect */
+}
+
+/* General styles for larger screens */
+.custom-event {
+  width: 70%;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 2%;
+}
+
+/* Media query for medium-sized screens */
+@media screen and (max-width: 1024px) {
+  .custom-event {
+    width: 80%;
+  }
+
+  .custom-hackathon-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-hackathon-description {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .custom-event {
+    width: 90%;
+  }
+
+  .custom-event-heading {
+    font-size: 2.5em;
+  }
+
+  .custom-hackathon-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-hackathon-image img {
+    border-radius: 8px;
+  }
+
+  .custom-hackathon-description {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .custom-event-countdown {
+    margin-top: 20px;
+  }
+
+  .custom-countdown-item {
+    margin: 10px 0;
+  }
+}
+
+/* Media query for very small screens */
+@media screen and (max-width: 480px) {
+  .custom-event {
+    width: 80%;
+  }
+
+  .custom-event-heading {
+    font-size: 2em;
+  }
+
+  .custom-hackathon-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-hackathon-image img {
+    border-radius: 8px;
+  }
+
+  .custom-hackathon-description {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .custom-event-countdown {
+    margin-top: 20px;
+  }
+
+  .custom-countdown-item {
+    margin: 10px 0;
+  }
 }
