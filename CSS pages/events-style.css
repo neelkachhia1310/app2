@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 body {
-  background-color: aliceblue;
+  background-color: #f5f5f5;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
+
 .events {
-  min-width: 200px;
   max-width: 1200px;
   margin: 2% auto;
   display: flex;
@@ -13,37 +17,99 @@ body {
 }
 
 .eventinfo {
-  border: 2px solid black;
-  min-width: 100px;
-  max-width: 500px;
-  font-family: "Open Sans", sans-serif, Arial;
-  padding: 1em;
-  flex-wrap: wrap;
-  background-image: linear-gradient(180deg, rgba(118, 177, 241, 0.845), white);
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1em;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.eventinfo:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.eventinfo:nth-child(odd) {
+  background-color: #fff;
+}
+
+.eventinfo:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.eventinfo:nth-child(3) {
+  background-color: #e0f7fa;
+}
+
+.eventinfo:nth-child(4) {
+  background-color: #e8f5e9;
+}
+
+.eventinfo:nth-child(5) {
+  background-color: #f3e5f5;
+}
+
+.eventinfo:nth-child(6) {
+  background-color: #f0f4c3;
 }
 
 .eventinfoheading {
   font-weight: bold;
   text-align: center;
   margin-top: 0;
-  font-size: 2 em;
-  color: #f8170be3;
+  font-size: 1.8em;
+  color: #333;
   cursor: pointer;
+  padding: 1em;
+  background-color: #f0f0f0;
+  border-bottom: 2px solid #ddd;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .eventinfoheading:hover {
-  color: black;
+  color: #555;
+  background-color: #ddd;
 }
 
 .eventdata {
-  margin-bottom: 0px;
+  margin: 1em;
+  color: #444;
 }
 
-.bookmarklocation {
+.like-btn,
+.dislike-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
+.like-btn i,
+.dislike-btn i {
+  margin-right: 5px;
+  color: #444;
+}
+
+.like-count,
+.dislike-count {
+  margin-left: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+.fa-solid {
+  display: none;
+}
+
+.like-btn.active i.fa-solid,
+.dislike-btn.active i.fa-solid {
+  display: inline-block;
+  color: #3498db;
+}
+
+/* Custom Styling for Popup */
 #popupContainer {
   display: none;
   position: fixed;
@@ -93,36 +159,104 @@ body {
   color: #555;
 }
 
-#popupContainer {
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+/* Media query for responsive design */
+@media screen and (max-width: 600px) {
+  .eventinfo {
+    width: 90%;
+  }
 }
 
-.like-btn,
-.dislike-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
+/* Update the box design styles */
+.custom-event {
+  border: 4px solid #3498db; /* Increase border thickness */
+  border-radius: 15px; /* Make rounded corners more prominent */
+  padding: 30px; /* Increase padding for more space */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Adjust box shadow for a more prominent effect */
+  background-color: #f9f9f9; /* Light gray background color */
+  width: 70%;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 2%;
+}
+
+/* Style the heading */
+.custom-event-heading {
+  font-size: 3em; /* Increase heading font size for emphasis */
+  color: #ff6b6b; /* Change the color to a vibrant red */
+  text-align: center; /* Center the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow for depth */
+  font-family: "Pacifico", cursive; /* Use a unique font family for a distinctive look */
+  margin-top: 0;
+}
+
+/* Optional: Import the 'Pacifico' font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+/* Style the hackathon details */
+.custom-hackathon-details {
   display: flex;
+  justify-content: space-around; /* Adjust alignment for a more dynamic look */
   align-items: center;
+  margin-top: 30px; /* Increase top margin for separation */
 }
 
-.like-btn i,
-.dislike-btn i {
-  margin-right: 5px;
+/* Style the hackathon image */
+.custom-hackathon-image img {
+  max-width: 100%;
+  border-radius: 15px; /* Make the image corners more rounded */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Adjust image shadow for a subtle effect */
 }
 
-.like-count,
-.dislike-count {
-  margin-left: 5px;
-  font-weight: bold;
+/* Style the hackathon description */
+.custom-hackathon-description {
+  max-width: 700px; /* Increase the max-width for better readability */
+  margin-left: 30px; /* Increase left margin for separation */
+  text-align: justify; /* Justify the text for a cleaner look */
 }
 
-.fa-solid {
-  display: none; /* Hide solid thumbs-up and thumbs-down icons by default */
+/* Container styling */
+.custom-event-countdown {
+  margin-top: 30px;
+  text-align: center;
 }
 
-/* Style for solid icons when active */
-.like-btn.active i.fa-solid,
-.dislike-btn.active i.fa-solid {
+/* Individual countdown item styling */
+.custom-countdown-item {
   display: inline-block;
+  margin: 0 15px;
+  border-radius: 8px; /* Add rounded corners */
+  background-color: #3498db; /* Set a blue background color */
+  padding: 10px; /* Add padding for a cleaner look */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+/* Countdown number styling */
+.custom-countdown-number {
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff; /* Set text color to white */
+}
+
+/* Countdown label styling */
+.custom-countdown-label {
+  font-size: 1em;
+  color: #ecf0f1; /* Light gray color for labels */
+}
+
+/* Hover effect for a subtle interaction */
+.custom-countdown-item:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  transition: background-color 0.3s ease;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 600px) {
+  .custom-countdown-item {
+    margin: 10px 0; /* Adjust margin for smaller screens */
+  }
+}
+
+/* Optional: Add hover effect to the entire section */
+.custom-event:hover {
+  transform: scale(1.02); /* Scale the section on hover for a subtle effect */
 }

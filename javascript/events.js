@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
+  let headings = document.querySelectorAll(".eventinfoheading");
+  headings.forEach(function (heading) {
+    heading.addEventListener("click", function () {
+      let eventData = heading.nextElementSibling.textContent;
+      openPopup(heading.innerText, eventData);
+    });
+  });
+
+  let closeButton = document.getElementById("closePopup");
+  closeButton.addEventListener("click", closePopup);
+
   if (Notification.permission !== "granted") {
     Notification.requestPermission().then(function (permission) {
       if (permission === "granted") {
@@ -20,35 +31,94 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("permission already granted!");
   }
 
-  const likeButton = document.getElementById("thumsup1");
-  const dislikeButton = document.getElementById("thumbsdown1");
-  const likeIcon = document.getElementById("likeIcon1");
-  const likedIcon = document.getElementById("likedIcon1");
-  const dislikeIcon = document.getElementById("dislikeIcon1");
-  const dislikedIcon = document.getElementById("dislikedIcon1");
+  const likeButton = document.getElementById("thumsup");
+  const dislikeButton = document.getElementById("thumbsdown");
+  const likeIcon = document.getElementById("likeIcon");
+  const dislikeIcon = document.getElementById("dislikeIcon");
+  const likedIcon = document.getElementById("likedIcon");
+  const dislikedIcon = document.getElementById("dislikedIcon");
+  const likeCount = document.getElementById("likeCount");
+  const dislikeCount = document.getElementById("dislikeCount");
 
-  likeButton.classList.add("active");
-  dislikeButton.classList.remove("active");
+  // Set initial state
+  let initialLikeCount = Math.floor(Math.random() * 100);
+  let initialDislikeCount = Math.floor(Math.random() * 100);
+
+  likeCount.textContent = initialLikeCount;
+  dislikeCount.textContent = initialDislikeCount;
   likeIcon.style.display = "inline-block";
-  likedIcon.style.display = "none";
   dislikeIcon.style.display = "inline-block";
-  dislikedIcon.style.display = "none";
-
-  // Set the initial count (you can change this value)
-  const initialCount = 3; // Replace with your desired initial count
-  const likeCount = document.getElementById("likeCount1");
-  const dislikeCount = document.getElementById("dislikeCount1");
-  likeCount.textContent = initialCount;
-  dislikeCount.textContent = initialCount;
-
   // Event listeners for like and dislike buttons
   likeButton.addEventListener("click", function () {
-    toggleLikeDislike("thumsup1");
+    if (
+      likeIcon.style.display === "inline-block" &&
+      dislikeIcon.style.display === "inline-block"
+    ) {
+      likedIcon.style.display = "inline-block";
+      likeIcon.style.display = "none";
+      likeCount.textContent = initialLikeCount + 1;
+    } else if (likedIcon.style.display === "inline-block") {
+      likedIcon.style.display = "none";
+      likeIcon.style.display = "inline-block";
+      likeCount.textContent = initialLikeCount;
+    } else {
+      likedIcon.style.display = "inline-block";
+      likeIcon.style.display = "none";
+      likeCount.textContent = initialLikeCount + 1;
+      dislikedIcon.style.display = "none";
+      dislikeIcon.style.display = "inline-block";
+      dislikeCount.textContent = initialDislikeCount;
+    }
+  });
+  dislikeButton.addEventListener("click", function () {
+    if (
+      likeIcon.style.display === "inline-block" &&
+      dislikeIcon.style.display === "inline-block"
+    ) {
+      dislikedIcon.style.display = "inline-block";
+      dislikeIcon.style.display = "none";
+      dislikeCount.textContent = initialDislikeCount + 1;
+    } else if (dislikedIcon.style.display === "inline-block") {
+      dislikedIcon.style.display = "none";
+      dislikeIcon.style.display = "inline-block";
+      dislikeCount.textContent = initialDislikeCount;
+    } else {
+      likedIcon.style.display = "none";
+      likeIcon.style.display = "inline-block";
+      likeCount.textContent = initialLikeCount;
+      dislikedIcon.style.display = "inline-block";
+      dislikeIcon.style.display = "none";
+      dislikeCount.textContent = initialDislikeCount + 1;
+    }
   });
 
-  dislikeButton.addEventListener("click", function () {
-    toggleLikeDislike("thumsup1");
-  });
+  const hackathonDate = new Date("2023-12-17T00:00:00");
+
+  // Function to update the countdown
+  function updateCountdown() {
+    const now = new Date();
+    const timeDifference = hackathonDate - now;
+
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor(
+      (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+    );
+    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+    document.getElementById("customDays").innerText = days;
+    document.getElementById("customHours").innerText = hours;
+    document.getElementById("customMinutes").innerText = minutes;
+    document.getElementById("customSeconds").innerText = seconds;
+  }
+
+  // Update the countdown every second
+  setInterval(updateCountdown, 1000);
+
+  // Initial update
+  updateCountdown();
 });
 
 // let notification, interval;
@@ -121,89 +191,43 @@ function closePopup() {
   document.body.style.overflow = "auto";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  let headings = document.querySelectorAll(".eventinfoheading");
-  headings.forEach(function (heading) {
-    heading.addEventListener("click", function () {
-      let eventData = heading.nextElementSibling.textContent;
-      openPopup(heading.innerText, eventData);
-    });
-  });
+// function toggleLikeDislike(isLike) {
+//   const likeIcon = document.getElementById("likeIcon");
+//   const dislikeIcon = document.getElementById("dislikeIcon");
+//   const likedIcon = document.getElementById("likedIcon");
+//   const dislikedIcon = document.getElementById("dislikedIcon");
+//   const likeCount = document.getElementById("likeCount");
+//   const dislikeCount = document.getElementById("dislikeCount");
 
-  let closeButton = document.getElementById("closePopup");
-  closeButton.addEventListener("click", closePopup);
-});
+//   let currentLikeCount = parseInt(likeCount.textContent);
+//   let currentDislikeCount = parseInt(dislikeCount.textContent);
 
-function toggleLikeDislike(id) {
-  const likeButton = document.getElementById(id);
-  const dislikeButton = document.getElementById(`thumbs${id.substring(6)}`);
-  const likeIcon = document.getElementById(`likeIcon${id.substring(6)}`);
-  const likedIcon = document.getElementById(`likedIcon${id.substring(6)}`);
-  const dislikeIcon = document.getElementById(`dislikeIcon${id.substring(6)}`);
-  const dislikedIcon = document.getElementById(
-    `dislikedIcon${id.substring(6)}`
-  );
-  const likeCount = document.getElementById(`likeCount${id.substring(6)}`);
-  const dislikeCount = document.getElementById(
-    `dislikeCount${id.substring(6)}`
-  );
-
-  if (likeButton.classList.contains("active")) {
-    // User is unliking, toggle it off
-    likeButton.classList.remove("active");
-    likeIcon.style.display = "inline-block";
-    likedIcon.style.display = "none";
-    likeCount.textContent = parseInt(likeCount.textContent) - 1;
-  } else {
-    // User is liking, toggle it on
-    likeButton.classList.add("active");
-    likeIcon.style.display = "none";
-    likedIcon.style.display = "inline-block";
-    likeCount.textContent = parseInt(likeCount.textContent) + 1;
-
-    // If dislike was active, toggle it off
-    if (dislikeButton.classList.contains("active")) {
-      dislikeButton.classList.remove("active");
-      dislikeIcon.style.display = "inline-block";
-      dislikedIcon.style.display = "none";
-      dislikeCount.textContent = parseInt(dislikeCount.textContent) - 1;
-    }
-  }
-}
-
-function toggleLikeDislike(id) {
-  const likeButton = document.getElementById(id);
-  const dislikeButton = document.getElementById(`thumbs${id.substring(6)}`);
-  const likeIcon = document.getElementById(`likeIcon${id.substring(6)}`);
-  const likedIcon = document.getElementById(`likedIcon${id.substring(6)}`);
-  const dislikeIcon = document.getElementById(`dislikeIcon${id.substring(6)}`);
-  const dislikedIcon = document.getElementById(
-    `dislikedIcon${id.substring(6)}`
-  );
-  const likeCount = document.getElementById(`likeCount${id.substring(6)}`);
-  const dislikeCount = document.getElementById(
-    `dislikeCount${id.substring(6)}`
-  );
-
-  if (likeButton.classList.contains("active")) {
-    // User is unliking, toggle it off
-    likeButton.classList.remove("active");
-    likeIcon.style.display = "inline-block";
-    likedIcon.style.display = "none";
-    likeCount.textContent = parseInt(likeCount.textContent) - 1;
-  } else {
-    // User is liking, toggle it on
-    likeButton.classList.add("active");
-    likeIcon.style.display = "none";
-    likedIcon.style.display = "inline-block";
-    likeCount.textContent = parseInt(likeCount.textContent) + 1;
-
-    // If dislike was active, toggle it off
-    if (dislikeButton.classList.contains("active")) {
-      dislikeButton.classList.remove("active");
-      dislikeIcon.style.display = "inline-block";
-      dislikedIcon.style.display = "none";
-      dislikeCount.textContent = parseInt(dislikeCount.textContent) - 1;
-    }
-  }
-}
+//   if (isLike) {
+//     if (likeIcon.style.display === "none") {
+//       likedIcon.style.display = "none";
+//       likeIcon.style.display = "inline-block";
+//       likeCount.textContent = currentLikeCount - 1;
+//     } else {
+//       likeIcon.style.display = "none";
+//       likedIcon.style.display = "inline-block";
+//       dislikeIcon.style.display = "none";
+//       dislikedIcon.style.display = "inline-block";
+//       likeCount.textContent = currentLikeCount + 1;
+//       dislikeCount.textContent =
+//         currentDislikeCount > 0 ? currentDislikeCount - 1 : 0;
+//     }
+//   } else {
+//     if (dislikeIcon.style.display === "none") {
+//       dislikedIcon.style.display = "none";
+//       dislikeIcon.style.display = "inline-block";
+//       dislikeCount.textContent = currentDislikeCount - 1;
+//     } else {
+//       dislikeIcon.style.display = "none";
+//       dislikedIcon.style.display = "inline-block";
+//       likeIcon.style.display = "none";
+//       likedIcon.style.display = "inline-block";
+//       dislikeCount.textContent = currentDislikeCount + 1;
+//       likeCount.textContent = currentLikeCount > 0 ? currentLikeCount - 1 : 0;
+//     }
+//   }
+// }

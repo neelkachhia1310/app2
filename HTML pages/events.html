@@ -10,41 +10,85 @@
       src="https://kit.fontawesome.com/7ced19dc59.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../CSS pages/header-style.css" />
-    <link rel="stylesheet" href="../CSS pages/footer-style.css" />
+    <link rel="stylesheet" href="/CSS pages/header-style.css" />
     <link rel="stylesheet" href="/CSS pages/events-style.css" />
+    <link rel="stylesheet" href="/CSS pages/footer-style.css" />
   </head>
   <body>
     <div id="Wrapper">
       <header>
         <section class="headerdesign">
-          <a href="../index.html">
+          <a href="/HTML pages/home.html">
             <img src="/images/logo.jpg" id="headerlogo" class="logoImage" />
           </a>
-          <a href="index.html" class="logoText">
+          <a href="/HTML pages/home.html" class="logoText">
             <h1 class="logoText">College Connect</h1></a
           >
         </section>
       </header>
 
       <nav id="com_nav">
-        <ul class="com_nav_menu">
-          <li class="com_nav_menu_name">
-            <a href="/index.html">Home</a>
-          </li>
-          <li><a href="../HTML pages/profile.html">Profiles</a></li>
-          <li><a href="../HTML pages/messages.html">Chat</a></li>
-          <li><a href="../HTML pages/events.html">Events</a></li>
-          <li><a href="../HTML pages/Blogs.html">Blogs and Articles</a></li>
-          <li><a href="../HTML pages/Resource.html">Resource</a></li>
-          <li><a href="../HTML pages/carrer-opp.html">Career</a></li>
+        <ul>
+          <li><a href="/HTML pages/home.html">Home</a></li>
+          <li><a href="/HTML pages/profile.html">Profiles</a></li>
+          <li><a href="/HTML pages/messages.html">Chat</a></li>
+          <li><a href="/HTML pages/events.html">Events</a></li>
+          <li><a href="/HTML pages/Blogs.html">Blogs and Articles</a></li>
+          <li><a href="/HTML pages/Resource.html">Resource</a></li>
+          <li><a href="/HTML pages/carrer-opp.html">Career</a></li>
           <li>
-            <a href="../HTML pages/searchandfilter.html">Search and Filter</a>
+            <a href="/HTML pages/searchandfilter.html">Search and Filter</a>
           </li>
-          <li><a href="../HTML pages/donation.html">Donation</a></li>
+          <li><a href="/HTML pages/donation.html">Donation</a></li>
         </ul>
       </nav>
       <main>
+        <section class="custom-event" id="customHackathonEvent">
+          <h3 class="custom-event-heading">Innovation Challenge</h3>
+          <div class="custom-hackathon-details">
+            <div class="custom-hackathon-image">
+              <img
+                src="../images/hackathon.jpg"
+                alt="Innovation Challenge Image"
+              />
+            </div>
+            <div class="custom-hackathon-description">
+              <p>
+                An innovation challenge is an exciting event where talented
+                individuals or teams join forces to collaboratively work on
+                cutting-edge projects, often in the realm of software
+                development. The primary objective is to craft a functional
+                product, prototype, or solution within a set time frame,
+                typically ranging from a few hours to several days.
+              </p>
+              <p>
+                These time-limited events foster quick problem-solving and
+                creativity, providing participants with a unique opportunity to
+                challenge themselves, acquire new skills, and contribute to
+                groundbreaking solutions.
+              </p>
+            </div>
+          </div>
+          <div class="custom-event-countdown" id="customHackathonCountdown">
+            <div class="custom-countdown-item">
+              <span class="custom-countdown-number" id="customDays"></span>
+              <span class="custom-countdown-label">Days</span>
+            </div>
+            <div class="custom-countdown-item">
+              <span class="custom-countdown-number" id="customHours"></span>
+              <span class="custom-countdown-label">Hours</span>
+            </div>
+            <div class="custom-countdown-item">
+              <span class="custom-countdown-number" id="customMinutes"></span>
+              <span class="custom-countdown-label">Minutes</span>
+            </div>
+            <div class="custom-countdown-item">
+              <span class="custom-countdown-number" id="customSeconds"></span>
+              <span class="custom-countdown-label">Seconds</span>
+            </div>
+          </div>
+        </section>
+
         <section class="events">
           <section class="eventinfo">
             <h3 class="eventinfoheading" onclick="openPopup()">
@@ -57,35 +101,26 @@
               discuss their work in academic conferences and symposia.
             </p>
             <div class="sysmbols">
-              <button
-                id="thumsup1"
-                class="like-btn"
-                onclick="toggleLikeDislike('thumsup1')"
-              >
-                <i id="likeIcon1" class="fa-regular fa-thumbs-up"></i>
+              <!-- Like button -->
+              <button id="thumsup" class="like-btn">
+                <i id="likeIcon" class="fa-regular fa-thumbs-up"></i>
                 <i
-                  id="likedIcon1"
+                  id="likedIcon"
                   class="fa-solid fa-thumbs-up"
                   style="display: none"
                 ></i>
-                <span id="likeCount1" class="like-count">
-                  <!-- You can set some random count here -->5</span
-                >
+                <span id="likeCount" class="like-count"></span>
               </button>
-              <button
-                id="thumbsdown1"
-                class="dislike-btn"
-                onclick="toggleLikeDislike('thumsup1')"
-              >
-                <i id="dislikeIcon1" class="fa-regular fa-thumbs-down"></i>
+
+              <!-- Dislike button -->
+              <button id="thumbsdown" class="dislike-btn">
+                <i id="dislikeIcon" class="fa-regular fa-thumbs-down"></i>
                 <i
-                  id="dislikedIcon1"
+                  id="dislikedIcon"
                   class="fa-solid fa-thumbs-down"
                   style="display: none"
                 ></i>
-                <span id="dislikeCount1" class="dislike-count">
-                  <!-- You can set some random count here -->2</span
-                >
+                <span id="dislikeCount" class="dislike-count"></span>
               </button>
             </div>
           </section>
@@ -97,20 +132,6 @@
               creations of the staff, the students, or outside artists. varied
               cultures are honored through food, entertainment, and exhibits.
             </p>
-            <div class="sysmbols">
-              <i
-                id="thumsup2"
-                class="fa-regular fa-thumbs-up thumpsUpPosition"
-                onclick="toggleLikeDislike('thumsup2')"
-              ></i>
-              <i
-                id="thumbsdown2"
-                class="fa-regular fa-thumbs-down thumpsDownPosition"
-                style="display: none"
-                onclick="toggleLikeDislike('thumsup2')"
-              ></i>
-              <i class="fa-regular fa-bookmark fa-lg bookmarklocation"></i>
-            </div>
           </section>
           <section class="eventinfo">
             <h3 class="eventinfoheading">Sports Events</h3>
@@ -119,20 +140,6 @@
               leagues and competitions in recreational sports. activities,
               lectures, and workshops promoting wellness and health.
             </p>
-            <div class="sysmbols">
-              <i
-                id="thumsup3"
-                class="fa-regular fa-thumbs-up thumpsUpPosition"
-                onclick="toggleLikeDislike('thumsup3')"
-              ></i>
-              <i
-                id="thumbsdown3"
-                class="fa-regular fa-thumbs-down thumpsDownPosition"
-                style="display: none"
-                onclick="toggleLikeDislike('thumsup3')"
-              ></i>
-              <i class="fa-regular fa-bookmark fa-lg bookmarklocation"></i>
-            </div>
           </section>
           <section class="eventinfo">
             <h3 class="eventinfoheading">Social and Networking Events</h3>
@@ -142,20 +149,6 @@
               and a sense of community. platforms for connecting with possible
               employers and researching work prospects.
             </p>
-            <div class="sysmbols">
-              <i
-                id="thumsup4"
-                class="fa-regular fa-thumbs-up thumpsUpPosition"
-                onclick="toggleLikeDislike('thumsup4')"
-              ></i>
-              <i
-                id="thumbsdown4"
-                class="fa-regular fa-thumbs-down thumpsDownPosition"
-                style="display: none"
-                onclick="toggleLikeDislike('thumsup4')"
-              ></i>
-              <i class="fa-regular fa-bookmark fa-lg bookmarklocation"></i>
-            </div>
           </section>
           <section class="eventinfo">
             <h3 class="eventinfoheading">Educational Workshops and Training</h3>
@@ -164,20 +157,6 @@
               public speaking, or coding. workshops on teamwork, leadership, and
               personal growth.
             </p>
-            <div class="sysmbols">
-              <i
-                id="thumsup5"
-                class="fa-regular fa-thumbs-up thumpsUpPosition"
-                onclick="toggleLikeDislike('thumsup5')"
-              ></i>
-              <i
-                id="thumbsdown5"
-                class="fa-regular fa-thumbs-down thumpsDownPosition"
-                style="display: none"
-                onclick="toggleLikeDislike('thumsup5')"
-              ></i>
-              <i class="fa-regular fa-bookmark fa-lg bookmarklocation"></i>
-            </div>
           </section>
           <section class="eventinfo">
             <h3 class="eventinfoheading">Celebrations</h3>
@@ -186,20 +165,6 @@
               milestone occasions recognizing the founding of the institution or
               certain departments.
             </p>
-            <div class="sysmbols">
-              <i
-                id="thumsup6"
-                class="fa-regular fa-thumbs-up thumpsUpPosition"
-                onclick="toggleLikeDislike('thumsup6')"
-              ></i>
-              <i
-                id="thumbsdown6"
-                class="fa-regular fa-thumbs-down thumpsDownPosition"
-                style="display: none"
-                onclick="toggleLikeDislike('thumsup6')"
-              ></i>
-              <i class="fa-regular fa-bookmark fa-lg bookmarklocation"></i>
-            </div>
           </section>
         </section>
         <div id="popupContainer" class="popup-container">
